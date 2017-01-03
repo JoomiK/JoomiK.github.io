@@ -1,10 +1,10 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-I'm an oceanographer-turned-data scientist. I'm passionate about writing, math, psychology, and travel.
+I am passionate about data science, and this site posts some of my projects. I am an oceanographer by training. During my PhD, I used both experimental and computational methods to study ways to optimize biofuel production from marine algae. I also love writing, math, psychology, and travel.
 
 
 ### Contact me
