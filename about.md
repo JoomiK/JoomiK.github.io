@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I'm an oceanographer-turned-data scientist. I'm passionate about writing, math, psychology, and travel.
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[joomikim1@gmail.com](mailto:joomikim1@gmail.com)
