@@ -8,7 +8,7 @@ title: Projects
  
  [AB Testing Teaching Methods]( https://github.com/JoomiK/AB-testing-teaching-methods
 ) 
-  [Sentiment Analysis](https://github.com/JoomiK/Trump_Clinton_Tweets/blob/master/Trump_Clinton_tweets.ipynb) 
+ [Sentiment Analysis](https://github.com/JoomiK/Trump_Clinton_Tweets/blob/master/Trump_Clinton_tweets.ipynb) 
 
  [Gene Expression Analysis](https://github.com/JoomiK/GeneExpression) 
 
