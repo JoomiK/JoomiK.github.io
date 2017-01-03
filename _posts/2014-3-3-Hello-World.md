@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Welcome to my blog!
+title: Projects
 ---
 
-## Projects
 
  [Clustering Wine Drinkers](https://github.com/JoomiK/WineDrinkers) 
  
