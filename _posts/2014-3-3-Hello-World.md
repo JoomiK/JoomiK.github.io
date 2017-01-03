@@ -4,5 +4,8 @@ title: Welcome to my blog!
 ---
 
 
+ [Clustering Wine Drinkers](https://github.com/JoomiK/WineDrinkers) 
+ 
+ [AB Testing teaching methods]( https://github.com/JoomiK/AB-testing-teaching-methods
+) 
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
