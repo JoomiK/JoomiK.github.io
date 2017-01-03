@@ -3,6 +3,7 @@ layout: post
 title: Welcome to my blog!
 ---
 
+## Projects
 
  [Clustering Wine Drinkers](https://github.com/JoomiK/WineDrinkers) 
  
