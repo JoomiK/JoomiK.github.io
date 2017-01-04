@@ -3,7 +3,7 @@ layout: post
 title: Metropolis sampling
 ---
 
-Code examples to explain the intuition being the Metropolis sampling algorithm.
+Code examples to explain the intuition being the MCMC Metropolis sampling algorithm.
 
 
 ### Metropolis Sampling
