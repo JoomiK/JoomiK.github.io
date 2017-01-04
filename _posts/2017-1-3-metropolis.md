@@ -3,9 +3,7 @@ layout: post
 title: Metropolis (MCMC) sampling
 ---
 
-Personally, I had always found it difficult to wrap my brain around why the Metropolis sampling algorithm works. I think implementing something with code is a good way to gain an understanding for something. That's why I found coding examples to explain the intuition behind the Metropolis sampling (MCMC) algorithm to be so helpful. 
-
-Thanks to [this post](http://twiecki.github.io/blog/2015/11/10/mcmc-sampling/) for more code and explanations.
+Personally, I had always found it difficult to wrap my brain around why the Metropolis sampling algorithm works. Implementing something with code is a good way to gain an understanding for something, which is why I found coding examples to explain the intuition behind the Metropolis sampling (MCMC) algorithm to be so helpful. 
 
 ### Metropolis Sampling
 
@@ -224,6 +222,7 @@ The number of iteration is at the top center of each row.
 
 ![png](/images/output_13_7.png)
 
+Thanks to [this post](http://twiecki.github.io/blog/2015/11/10/mcmc-sampling/) for more code and explanations.
 
 
 ```python
