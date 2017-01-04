@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visualizing Traffic Accidents
+title: Visualizing traffic accidents
 ---
 
 Analyzing public data on bike, pedestrian, and motor vechicle accidents in NYC from 2009 to 2016 (this is still a work in progress).
