@@ -11,5 +11,4 @@ I also love writing, math, psychology, and travel. Oh, and I spend too much time
 
 
 ### Contact me
-
 [joomikim1@gmail.com](mailto:joomikim1@gmail.com)
