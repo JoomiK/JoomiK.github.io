@@ -47,8 +47,7 @@ sns.distplot(data, kde=False, ax=ax)
 _ = ax.set(title='Histogram of observed data', xlabel='x', ylabel='# observations');
 ```
 
-
-![png](output_5_0.png)
+![png](/images/output_5_0.png)
 
 
 Let's define our model. We will assume that this data is normally distributed, i.e. the likelihood of the model is normal. For simplicity we will assume we know that sigma = 1 and we want to infer the posterior for mean mu. For mu let's assume a normal distribution as a prior. In this case we can compute the posterior analytically.
