@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Segmenting Wine Drinkers
+title: Segmenting wine drinkers
 ---
 I used k-means clustering to segment wine drinkers by the kinds of wine they buy.
 
