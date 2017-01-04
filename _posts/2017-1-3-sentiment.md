@@ -4,7 +4,7 @@ title: Sentiment Analysis
 ---
 
  
-[Sentiment Analysis of Tweets](https://github.com/JoomiK/Trump_Clinton_Tweets/blob/master/Trump_Clinton_tweets.ipynb) 
+[Sentiment Analysis of Tweets about Trump and Clinton](https://github.com/JoomiK/Trump_Clinton_Tweets/blob/master/Trump_Clinton_tweets.ipynb) 
 
 An analysis of tweets about Trump and Clinton.
 
