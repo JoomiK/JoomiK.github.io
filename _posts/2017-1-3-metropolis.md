@@ -125,7 +125,7 @@ def sampler(data, samples=4, mu_init=.5, proposal_width=.5, plot=False, mu_prior
     return posterior
 ```
 
-Why does this matter? Well the whole point of using MCMC is for cases when we can't compute P(data), aka the denominator in Bayes formula. Since we are dividing posteriors here, the denominators cancel out nicely. In the end, we end up visiting regions of high posterior probability relatively more often that those of low posterior probability.
+Why does this matter? Well the whole point of using MCMC is for cases when we can't compute P(data), aka the denominator in Bayes formula. Since we are dividing posteriors here, the denominators cancel out nicely. This is how this procedure gives us samples from the posterior. In the end, we end up visiting regions of high posterior probability relatively more often that those of low posterior probability.
 
 
 ```python
