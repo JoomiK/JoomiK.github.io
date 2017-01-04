@@ -70,7 +70,7 @@ sns.despine()
 ```
 
 
-![png](output_7_0.png)
+![png](/images/output_7_0.png)
 
 
 ### How would we do this if we couldn't solve this by hand?
@@ -190,35 +190,35 @@ sampler(data, samples=8, mu_init=-1., plot=True);
 ```
 
 
-![png](output_13_0.png)
+![png](/images/output_13_0.png)
 
 
 
-![png](output_13_1.png)
+![png](/images/output_13_1.png)
 
 
 
-![png](output_13_2.png)
+![png](/images/output_13_2.png)
 
 
 
-![png](output_13_3.png)
+![png](/images/output_13_3.png)
 
 
 
-![png](output_13_4.png)
+![png](/images/output_13_4.png)
 
 
 
-![png](output_13_5.png)
+![png](/images/output_13_5.png)
 
 
 
-![png](output_13_6.png)
+![png](/images/output_13_6.png)
 
 
 
-![png](output_13_7.png)
+![png](/images/output_13_7.png)
 
 
 
