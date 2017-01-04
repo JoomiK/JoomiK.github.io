@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Projects
+title: Segmenting Wine Drinkers
 ---
 
 
