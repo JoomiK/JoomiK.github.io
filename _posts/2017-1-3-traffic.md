@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visualizing traffic accidents
+title: Visualizing Traffic Accidents
 ---
 
 [Traffic Accidents](https://github.com/JoomiK/Accidents/blob/master/Accidents.ipynb)
