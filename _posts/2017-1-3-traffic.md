@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Visualizing Traffic Accidents
+title: [Visualizing Traffic Accidents](https://github.com/JoomiK/Accidents/blob/master/Accidents.ipynb)
 ---
 
-[Traffic Accidents](https://github.com/JoomiK/Accidents/blob/master/Accidents.ipynb)
 
 Analyzing accident data in NYC (work in progress).
