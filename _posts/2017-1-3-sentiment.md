@@ -7,6 +7,7 @@ For this project I used the Twitter API to collect tweets about Trump and Clinto
 
 [Anaysis of tweets about Trump and Clinton Part I](https://github.com/JoomiK/Trump_Clinton_Tweets/blob/master/Trump_Clinton_tweets.ipynb)
 Data cleanup/pre-processing and word counts.
+
 [Anaysis of tweets about Trump and Clinton Part II](https://github.com/JoomiK/Trump_Clinton_Tweets/blob/master/Trump_Clinton_Tweets_2.ipynb)
 Classification/sentiment analysis of tweets.
 
