@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Metropolis sampling
+title: Metropolis (MCMC) sampling
 ---
 
-Code examples to explain the intuition behind the Metropolis sampling (MCMC) algorithm.
-
+Personally, I had always found it difficult to wrap my brain around why the Metropolis sampling algorithm works. I think implementing something from scratch is a good way to gain an understanding for something. That's why I found coding examples to explain the intuition behind the Metropolis sampling (MCMC) algorithm to be so helpful. 
+Thanks to [this post](http://twiecki.github.io/blog/2015/11/10/mcmc-sampling/) for more code and explanations.
 
 ### Metropolis Sampling
 
-Here are code examples to explain the intuition behind the Metropolis sampling algorithm.
+Here are code examples and my annotations to explain the intuition behind the Metropolis sampling algorithm.
 
 
 ```python
@@ -32,8 +32,8 @@ np.random.seed(123)
       "`IPython.html.widgets` has moved to `ipywidgets`.", ShimWarning)
 
 
-Let's generate 100 points from a normal distribution with mean zero.
-Suppose we want to estimate the posterior of the mean mu.
+First let's generate some made up data- 100 points from a standard normal distribution.
+Suppose we want to estimate the posterior of the mean mu. Of course for something simple like this, we wouldn't need to use MCMC sampling. However, let's forge ahead for illustration's sake.
 
 
 ```python
@@ -50,7 +50,7 @@ _ = ax.set(title='Histogram of observed data', xlabel='x', ylabel='# observation
 ![png](/images/output_5_0.png)
 
 
-Let's define our model. We will assume that this data is normally distributed, i.e. the likelihood of the model is normal. For simplicity we will assume we know that sigma = 1 and we want to infer the posterior for mean mu. For mu let's assume a normal distribution as a prior. In this case we can compute the posterior analytically.
+Let's define our model. We will assume that this data is normally distributed. For simplicity we will assume we know that sigma = 1. For mu let's assume a normal distribution as a prior. In this case we can compute the posterior analytically.
 
 
 ```python
@@ -73,16 +73,17 @@ sns.despine()
 ![png](/images/output_7_0.png)
 
 
-### How would we do this if we couldn't solve this by hand?
+### How would we do this if we couldn't solve this analytically?
 
 Let's see how we would do this if we couldn't solve this by hand, and demonstrate how the Matropolis algorithm works.
 
-1. At first you would find a starting parameter position. That's mu_current.
+1. At first you find a random starting parameter position. That's mu_current.
 
-2. Then you propose to move from that position to somewhere else. The Metropolis sampler just takes a sample from a normal distribution centered at your current mu value with a standard deviation (proposal_width) that determines how far you propose jumps (here we will use scipy.stats.norm).
+2. Then you propose to move from that position to somewhere else. The Metropolis sampler just takes a sample from a normal distribution centered at your current mu value with a standard deviation (proposal_width) that determines how far you propose jumps (here we use scipy.stats.norm).
 
-3. Next you evaluate whether that's a good place to jump or not. If the resulting normal distribution with that proposed_mu explains the data better than the old mu, you definitely go there. "Explains the data better" here means we compute the probability of the data, given the likelihood (normal) with the proposed parameter values (proposed mu and fixed sigma =1).
+3. Next you evaluate whether to accept or reject the proposal- in other words, decide wheter that's a good place to jump or not. If the resulting normal distribution with that proposed_mu explains the data better than the old mu, you definitely go there. "Explains the data better" here means we compute the probability of the data, given the likelihood (normal) with the proposed parameter values (proposed mu and fixed sigma = 1).
 
+4. We would just have a hill-climbin algorithm if this was all there was to the algorithm. So sometimes we have to accept moves into directions where the mu_proposal does not have higher likelihood than mu_current. The acceptance probability, p_accept, which is a ratio of p_proposal/p_current allows us to do just that. If p_proposal is larger than p_current, that ratio will be greater than 1 and we will accept. If p_current is larger, we will move with probability equal to p_accept.
 
 ```python
 def sampler(data, samples=4, mu_init=.5, proposal_width=.5, plot=False, mu_prior_mu=0, mu_prior_sd=1.):
@@ -124,7 +125,7 @@ def sampler(data, samples=4, mu_init=.5, proposal_width=.5, plot=False, mu_prior
     return posterior
 ```
 
-We visit regions of high posterior probability relatively more often that those of low posterior probability.
+Why does this matter? Well the whole point of using MCMC is for cases when we can't compute P(data), aka the denominator in Bayes formula. Since we are dividing posteriors here, the denominators cancel out nicely. In the end, we end up visiting regions of high posterior probability relatively more often that those of low posterior probability.
 
 
 ```python
@@ -188,7 +189,9 @@ def plot_proposal(mu_current, mu_proposal, mu_prior_mu, mu_prior_sd, data, accep
 np.random.seed(123)
 sampler(data, samples=8, mu_init=-1., plot=True);
 ```
-
+Finally, some plots to visualize the sampling. Each row is a single iteration through the Metropolis sampler. The columns are:
+1. prior, 2. likelihood, 3. posterior, 4. trace (posterior samples of mu we are generating).
+The number of iteration is at the top center of each row.
 
 ![png](/images/output_13_0.png)
 
