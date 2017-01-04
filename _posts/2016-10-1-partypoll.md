@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Predicting Political Leanings
+title: Predicting political leanings
 ---
 I collected tweets from followers of two "third party" political parties in the U.S., the Green Party, and the Libertarian Party. 
 I used this to train a logistic regression classifier that would predict political leanings based on text data, and used Latent Dirichlet Allocation to explore topics of third party followers. 
