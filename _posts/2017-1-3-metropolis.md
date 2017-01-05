@@ -3,11 +3,9 @@ layout: post
 title: Metropolis (MCMC) sampling
 ---
 
-Personally, I had always found it difficult to wrap my brain around why the Metropolis sampling algorithm works. Implementing something with code is a good way to gain an understanding for something, which is why I found coding examples to explain the intuition behind the Metropolis sampling (MCMC) algorithm to be so helpful. 
+Code examples and annotations to explain the intuition behind how the Metropolis sampling (MCMC) algorithm works. 
 
 ### Metropolis Sampling
-
-Here are code examples and my annotations to help explain the intuition behind the Metropolis sampling algorithm.
 
 
 ```python
