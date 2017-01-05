@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Predicting housing prices and outlier detection
+title: Predicting housing prices + outlier detection
 ---
 Predicting house prices in Boston with linear, polynomial, and random forest regression, and outlier detection by fitting an elliptic envelope or one class SVM.
 
