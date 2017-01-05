@@ -6,4 +6,4 @@ Predicting house prices in Boston with linear, polynomial, and random forest reg
 
 [Predicting housing prices](https://github.com/JoomiK/HousingPrices/blob/master/BostonHousing.ipynb)
 
-TO DO: Feature selection to improve on the models.
+TO DO: Feature selection to improve on the models (stay tuned).
