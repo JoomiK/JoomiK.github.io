@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sentiment analysis
+title: Sentiment analysis of tweets
 --- 
 
 Here I used the Twitter API to collect tweets about Trump and Clinton, explored word co-occurrences, and performed sentiment analysis. 
