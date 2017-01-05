@@ -3,7 +3,7 @@ layout: post
 title: Metropolis (MCMC) sampling
 ---
 
-Code examples and annotations to explain the intuition behind how the Metropolis sampling (MCMC) algorithm works. 
+Code examples and annotations to explain the intuition behind the Metropolis sampling (MCMC) algorithm. 
 
 ### Metropolis Sampling
 
