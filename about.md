@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-I am an oceanographer-turned data scientist. My PhD research focused on experimental and computational methods to optimize sustainable biofuel production from marine algae. I got to design experiments, simulate algae metabolism using constrained linear optimization, and do statistical analysis of gene expression data. 
+I am an oceanographer-turned data scientist. My PhD research focused on experimental and computational methods to optimize biofuel production from marine algae. I got to design experiments, simulate algae metabolism using constrained linear optimization, and do statistical analysis of gene expression data. 
 
 These days, I spend more time on data that is directly related to people. Some of my projects have included AB testing teaching methods, predicting political leanings from tweets, topic modeling, sentiment analysis, customer segmentation, price modeling, and Bayesian analysis. 
 
