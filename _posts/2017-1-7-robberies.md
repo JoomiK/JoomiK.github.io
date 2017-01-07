@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Armed robberies in Boston time series analysis
+title: Armed robberies in Boston- time series analysis
 ---
 Mnthly armed robberies in Boston from 1966-1975.
 
