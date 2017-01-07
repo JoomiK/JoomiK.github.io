@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Armed robberies in Boston- time series analysis
+title: Time series analysis of armed robberies in Boston
 ---
 Analyzing monthly armed robberies in Boston from 1966-1975.
 
