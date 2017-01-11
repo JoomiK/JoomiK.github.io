@@ -9,11 +9,11 @@ The dataset contains a mix of continuous and categorical variables about what ki
 ### Outline:  
 [Part I- EDA and cleanup](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumps.ipynb)  
 * The data  
-* Visualizing water pumps and regions
+* Visualizing water pumps and regions  
 * Dropping some features  
 * Preprocessing labels  
 * Looking at features  
 
-Part II- Modeling
-* Missing value imputation
+Part II- Modeling  
+* Missing value imputation  
 * Model selection and evaluation
