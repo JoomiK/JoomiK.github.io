@@ -7,13 +7,13 @@ This project is for a competition from [drivendata.org](https://www.drivendata.o
 The dataset contains a mix of continuous and categorical variables about what kind of pump is operating, when it was installed, how it was managed, etc. 
 
 ### Outline:  
-#### [Part I- EDA and cleanup](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumps.ipynb)
+[Part I- EDA and cleanup](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumps.ipynb)  
 * The data  
 * Visualizing water pumps and regions
 * Dropping some features  
 * Preprocessing labels  
 * Looking at features  
 
-#### Part II- Modeling
+Part II- Modeling
 * Missing value imputation
 * Model selection and evaluation
