@@ -15,5 +15,4 @@ The dataset contains a mix of continuous and categorical variables about what ki
 - Looking at features  
 
 Part II- Modeling  
-- Missing value imputation  
 - Model selection and evaluation
