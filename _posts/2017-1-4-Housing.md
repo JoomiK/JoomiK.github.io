@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Predicting housing prices + outlier detection
+title: Predicting housing prices
 ---
 Predicting housing prices in Boston with gradient boosted regression trees.
 
