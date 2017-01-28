@@ -14,5 +14,5 @@ The rich feature space is derived from a mix of continuous and categorical varia
 - Preprocessing labels  
 - Looking at features  
 
-Part II- Modeling  
+[Part II- Modeling](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumpsII.ipynb)  
 - Model selection and evaluation
