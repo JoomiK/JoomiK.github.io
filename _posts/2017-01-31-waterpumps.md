@@ -995,8 +995,6 @@ print(important_names)
      'funder_Africaone Ltd' 'funder_Aqua Blues Angels' 'funder_Area']
 
 
-    /Users/jkim/anaconda/envs/py35/lib/python3.5/site-packages/ipykernel/__main__.py:1: VisibleDeprecationWarning: boolean index did not match indexed array along dimension 0; dimension is 7068 but corresponding boolean dimension is 100
-      if __name__ == '__main__':
 
 
 ### Top features:
@@ -1056,43 +1054,6 @@ Start up a local H2O cluster:
 ```python
 h2o.init(max_mem_size = "2G", nthreads=-1)
 ```
-
-    Checking whether there is an H2O instance running at http://localhost:54321..... not found.
-    Attempting to start a local H2O server...
-      Java Version: java version "1.8.0_40"; Java(TM) SE Runtime Environment (build 1.8.0_40-b27); Java HotSpot(TM) 64-Bit Server VM (build 25.40-b25, mixed mode)
-      Starting server from /Users/jkim/anaconda/envs/py35/lib/python3.5/site-packages/h2o/backend/bin/h2o.jar
-      Ice root: /var/folders/5d/ftxntrp16l5g04c049nr03pr0000gp/T/tmp_jb85xnp
-      JVM stdout: /var/folders/5d/ftxntrp16l5g04c049nr03pr0000gp/T/tmp_jb85xnp/h2o_jkim_started_from_python.out
-      JVM stderr: /var/folders/5d/ftxntrp16l5g04c049nr03pr0000gp/T/tmp_jb85xnp/h2o_jkim_started_from_python.err
-      Server is running at http://127.0.0.1:54321
-    Connecting to H2O server at http://127.0.0.1:54321... successful.
-
-
-
-<div style="overflow:auto"><table style="width:50%"><tr><td>H2O cluster uptime:</td>
-<td>02 secs</td></tr>
-<tr><td>H2O cluster version:</td>
-<td>3.10.0.10</td></tr>
-<tr><td>H2O cluster version age:</td>
-<td>2 months and 9 days </td></tr>
-<tr><td>H2O cluster name:</td>
-<td>H2O_from_python_jkim_cz0i75</td></tr>
-<tr><td>H2O cluster total nodes:</td>
-<td>1</td></tr>
-<tr><td>H2O cluster free memory:</td>
-<td>1.778 Gb</td></tr>
-<tr><td>H2O cluster total cores:</td>
-<td>8</td></tr>
-<tr><td>H2O cluster allowed cores:</td>
-<td>8</td></tr>
-<tr><td>H2O cluster status:</td>
-<td>accepting new members, healthy</td></tr>
-<tr><td>H2O connection url:</td>
-<td>http://127.0.0.1:54321</td></tr>
-<tr><td>H2O connection proxy:</td>
-<td>None</td></tr>
-<tr><td>Python version:</td>
-<td>3.5.2 final</td></tr></table></div>
 
 
 ### Import data:  
