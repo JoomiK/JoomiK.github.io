@@ -2,7 +2,7 @@
 layout: post
 title: Predicting non-functional water pumps in Tanzania
 ---
-Data: Competition for [drivendata.org](https://www.drivendata.org/competitions/7/).  
+Data: From a competition for [drivendata.org](https://www.drivendata.org/competitions/7/)
 Techniques: Classification, Random Forest, PCA
 
 Using data on water pumps in communities across Tanzania, can we predict the pumps that are functional, need repairs, or don't work at all?
