@@ -24,6 +24,67 @@ Among the features are:
 * Installer of the well  
 * Location 
 
+
+```python
+%matplotlib inline
+import matplotlib.pyplot as plt
+from matplotlib.pylab import rcParams
+import seaborn as sns
+import pandas as pd
+import numpy as np
+import sys
+
+import sklearn as sk
+from sklearn import metrics
+from sklearn.model_selection import train_test_split, ShuffleSplit, learning_curve, GridSearchCV
+from sklearn.preprocessing import StandardScaler, Imputer
+from sklearn.feature_selection import SelectKBest
+from sklearn.pipeline import Pipeline
+from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from IPython.core.display import display, HTML
+import warnings
+
+rcParams['figure.figsize'] = 12, 4
+print('Python version: %s.%s.%s' % sys.version_info[:3])
+print('numpy version:', np.__version__)
+print('pandas version:', pd.__version__)
+print('scikit-learn version:', sk.__version__)
+warnings.filterwarnings("ignore")
+```
+
+    Python version: 3.5.2
+    numpy version: 1.12.0
+    pandas version: 0.19.2
+    scikit-learn version: 0.18.1
+
+
+
+```python
+def label_map(y):
+    """
+    Converts string labels to integers
+    """
+    if y=="functional":
+        return 2
+    elif y=="functional needs repair":
+        return 1
+    else:
+        return 0
+    
+
+def isNan(num):
+    """
+    Function to test for Nan. Returns True for NaNs, False otherwise.
+    """
+    return num != num
+```
+
+
+
+
 ```python
 # Load the data
 train = pd.read_csv('training.csv', index_col='id')
