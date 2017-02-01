@@ -28,9 +28,6 @@ sns.set_context('talk')
 np.random.seed(123)
 ```
 
-    /Users/jkim/anaconda/envs/py35/lib/python3.5/site-packages/IPython/html.py:14: ShimWarning: The `IPython.html` package has been deprecated. You should import from `notebook` instead. `IPython.html.widgets` has moved to `ipywidgets`.
-      "`IPython.html.widgets` has moved to `ipywidgets`.", ShimWarning)
-
 
 First let's generate some made up data- 100 points from a standard normal distribution.
 Suppose we want to estimate the posterior of the mean mu. Of course for something simple like this, we wouldn't need to use MCMC sampling. However, let's forge ahead for illustration's sake.
