@@ -10,10 +10,10 @@ Techniques: Classification, random forest, imputation, PCA
 
 ---
 
+### Part I- EDA and cleanup  
 Using data on water pumps in communities across Tanzania, can we predict the pumps that are functional, need repairs, or don't work at all?  
 There are 39 features in total. They are described [here](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/page/25/#features_list).
 
-### Part I- EDA and cleanup  
 Among the features are:  
 
 * Construction year  
