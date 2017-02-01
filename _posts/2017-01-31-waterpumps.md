@@ -1101,7 +1101,8 @@ It's easy to imagine that we could improve our predictions with other sources of
 - Whether the water pump is in a hazardous or flooding area
 - Crime rate in the near vicinity  
 
-### For Part II - Model selection and evaluation
+
+### Part II - Model selection and evaluation
 
 
 I will try modeling two ways: (1) on one-hot encoded data, with and without dimensionality reduction, and (2) on the original data without one-hot encoding.
