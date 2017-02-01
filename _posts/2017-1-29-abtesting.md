@@ -12,7 +12,7 @@ Code:
 ---
 
 
-## Testing two different teaching methods.
+## Testing two different teaching methods  
 
 I participated in a study that looked at whether the order of presenting materials in a high school biology class made a difference in test scores.
 
@@ -37,7 +37,7 @@ np.random.seed(20090425)
 
 
 
-### The data
+### The data:
 
 
 ```python
@@ -183,7 +183,7 @@ So the description of the data uses five parameters: the means of the two groups
 
 I'll apply broad normal priors for the means. The hyperparameters are arbitrarily set to the pooled empirical mean of the data and 2 times the pooled empirical standard deviation; this just applies very "diffuse" information to these quantities.
 
-### Sampling from the posterior
+### Sampling from the posterior:
 
 
 ```python
@@ -272,7 +272,7 @@ with model:
     trace = pm.sample(2000, njobs=2)
 ```
 
-### Summarize the posterior distributions of the parameters.
+### Summarize the posterior distributions of the parameters:
 
 
 ```python
