@@ -273,13 +273,6 @@ with model:
     trace = pm.sample(2000, njobs=2)
 ```
 
-    Assigned NUTS to group1_mean
-    Assigned NUTS to group2_mean
-    Assigned NUTS to group1_std_interval_
-    Assigned NUTS to group2_std_interval_
-    Assigned NUTS to ν_min_one_log_
-     [-----------------100%-----------------] 2000 of 2000 complete in 10.7 sec
-
 ### Summarize the posterior distributions of the parameters.
 
 
