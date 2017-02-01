@@ -19,7 +19,6 @@ import scipy as sp
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
 from scipy.stats import norm
 
 sns.set_style('white')
