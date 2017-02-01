@@ -3,7 +3,7 @@ layout: post
 title: Predicting political leanings from text
 ---
 
-Data: Twitter API
+Data: Twitter API  
 Techniques: NLP, logistic regression, latent Dirichlet allocation, scraping
 
 I collected tweets from the followers of two "third party" political parties in the U.S., the Green Party, and the Libertarian Party, 
