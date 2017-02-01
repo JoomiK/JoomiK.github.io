@@ -1100,7 +1100,7 @@ I now have 7069 features.
 merged_clean_dum.to_csv('merged_clean_dum.csv')
 ```
 
-### A note on other features of interest  for this project
+#### A note on other features of interest  for this project
 It's easy to imagine that we could improve our predictions with other sources of data here. Some that come to mind in this case are:  
 - Presence of other utilities nearby  
 - Rate of previous breakdowns  
@@ -1108,7 +1108,7 @@ It's easy to imagine that we could improve our predictions with other sources of
 - Whether the water pump is in a hazardous or flooding area
 - Crime rate in the near vicinity  
 
-### Up next:
+#### Up next:
 For Part II - dealing with missing values + model selection and evaluation
 
 
