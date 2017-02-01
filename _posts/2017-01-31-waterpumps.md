@@ -1532,7 +1532,7 @@ plt.show()
 ```
 
 
-![png](output_25_0.png)
+![png](/images/waterpump_CM.png)
 
 
 The model has the most trouble classifying water pumps in class 1 (pumps that need repair).
