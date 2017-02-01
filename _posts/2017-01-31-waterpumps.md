@@ -27,7 +27,8 @@ Among the features are:
 * Total static head (amount water available to waterpoint)  
 * Funder of the well  
 * Installer of the well  
-* Location  
+* Location 
+
 ```python
 # Load the data
 train = pd.read_csv('training.csv', index_col='id')
@@ -884,7 +885,7 @@ When they are not the same, it's usually because 'DWE' appears as the installer.
 
 Also there are some cases where the same entitiy was probably entered differently- for example "Danida" and "Danid" or "Jaica" and "JAICA CO" or "Government of Tanzania" and "Government" or "Wateraid" and "Water Aid" I won't try to fix these for now, but this is something one would do ideally.
 
-### Dealing with categorical variables.
+#### Dealing with categorical variables.
 Convert categorical variables into dummy/indicator variables. At the same time, we'll be adding columns to indicate NaNs. 
 
 
