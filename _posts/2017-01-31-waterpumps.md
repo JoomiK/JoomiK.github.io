@@ -1438,8 +1438,5 @@ Just like in the sklearn implementation, from looking at the confusion marix we 
 The top features are also different from what we saw with the sklearn implementation, which upweighted the importance of continuous variables. In the H2O implementation the top features are all categorical.
 
 
-```python
-
-```
 
 
