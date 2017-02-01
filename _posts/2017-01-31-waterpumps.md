@@ -7,14 +7,8 @@ Techniques: Classification, random forest, imputation, PCA
 
 ### Links to Code:  
 [Part I- EDA and cleanup](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumps.ipynb)  
-- The data  
-- Visualizing water pumps and regions  
-- Dropping some features  
-- Preprocessing labels  
-- Looking at features  
 
 [Part II- Modeling](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumpsII.ipynb)  
-- Model selection and evaluation
 
 ---
 
