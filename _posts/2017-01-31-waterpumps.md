@@ -6,9 +6,9 @@ Data: From a competition for [drivendata.org](https://www.drivendata.org/competi
 Techniques: Classification, random forest, imputation, PCA
 
 Using data on water pumps in communities across Tanzania, can we predict the pumps that are functional, need repairs, or don't work at all?
-The rich feature space is derived from a mix of continuous and categorical variables; examples include information about what kind of pump is operating, when it was installed, the manager, the region, etc. 
+ 
 
-### Outline:  
+### Links to Code:  
 [Part I- EDA and cleanup](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumps.ipynb)  
 - The data  
 - Visualizing water pumps and regions  
@@ -18,3 +18,10 @@ The rich feature space is derived from a mix of continuous and categorical varia
 
 [Part II- Modeling](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumpsII.ipynb)  
 - Model selection and evaluation
+
+### Summary:  
+The Data:  
+There are 39 features. The rich feature space is derived from a mix of continuous and categorical variables; examples include information about what kind of pump is operating, when it was installed, the manager, the region, etc. They are described [here](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/page/25/#features_list).
+
+#### Visualizing water pumps
+![png](/images/WellMap.png)
