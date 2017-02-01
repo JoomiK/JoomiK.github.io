@@ -5,7 +5,6 @@ title: Predicting non-functional water pumps in Tanzania
 Data: From a competition for [drivendata.org](https://www.drivendata.org/competitions/7/)  
 Techniques: Classification, random forest, imputation, PCA   
 
-Links to Code:  
 [Part I- EDA and cleanup](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumps.ipynb)    
 [Part II- Modeling](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumpsII.ipynb)  
 
@@ -15,6 +14,7 @@ Links to Code:
 Using data on water pumps in communities across Tanzania, can we predict the pumps that are functional, need repairs, or don't work at all?  
 There are 39 features in total. They are described [here](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/page/25/#features_list).
 
+### Part I- EDA and cleanup  
 Among the features are:  
 
 * Construction year  
