@@ -8,6 +8,7 @@ Techniques: Classification, random forest, imputation, PCA
 [Part I- EDA and cleanup](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumps.ipynb)    
 [Part II- Modeling](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumpsII.ipynb)  
 
+
 ---
 
 ### Part I- EDA and cleanup  
