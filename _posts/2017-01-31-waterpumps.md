@@ -102,7 +102,7 @@ print("Test data rows, columns:", test.shape)
     Train data rows, columns: (59400, 39)
     Test data rows, columns: (14850, 39)
 
-### Visualizing water pumps
+### Visualizing water pumps:  
 Apparently responsibility for water and sanitation service provision is decentralized, so local governments are responsible for water resource management. Luckily, we have information on which regions the water pumps are in. Perhaps this will be a good predictor.
 
 ![png](/images/WellMap.png)
@@ -110,8 +110,7 @@ Apparently responsibility for water and sanitation service provision is decentra
 
 There is some "clumpiness" here; in the southeast you'll notice that there seems to be a higher proportion of non-functional pumps (red) than near Iringa, where you see a lot of green (functional).
 
-### Exploring the data  
-Looking at some continuous variables:
+### Exploring the data:  
 
     # Pairwise plots
     sns.set(style='whitegrid',context='notebook')
@@ -221,7 +220,7 @@ In addition to the 3635 NaNs, there are 777 that have the entry "0".
 I'm assuming these are missing values too, so altogether we have 4412 missing values.
 
 
-### Some other problems with this data
+### Some other problems with this data:  
 A summary of other things to deal with in this dataset:
 
 - installer: has NaNs, zeros, and many low frequency levels  
@@ -233,7 +232,7 @@ A summary of other things to deal with in this dataset:
 - public_meeting: has NaNs  
 
 
-### Some options for dealing with this missing data 
+### Some options for dealing with this missing data:  
 1. Drop the rows (I don't want to do this in this case because this would be a large proportion of the data).** 
 2. Mean/median/mode imputation (crude, can severely distort the distribution of the variable).  
 3. Predict (in order to do this, features need to be correlated or related somehow).
@@ -258,7 +257,7 @@ merged_clean = merged.replace({'funder':0, 'installer':0, 'population':0}, np.na
 merged_clean = merged.replace({'funder':'0', 'installer':'0'}, np.nan)
 ```
 
-### Dealing with low frequency/many levels
+### Dealing with low frequency/many levels:  
 For these cases I will take low frequency levels (those that occur 20 times or less) and set to "other." The 20 here is totally arbitrary; in the interest of time I won't test out different thresholds or ways to bin, but ideally I would use cross validation to try out different methods and look at the effect on model performance. 
 
 
@@ -276,7 +275,7 @@ exempt=['amount_tsh',  'gps_height',  'num_private',
 merged_clean = merged_clean.apply(lambda x: x.mask(x.map(x.value_counts())<20, 'other') if x.name not in exempt else x)
 ```
 
-### Construction year  
+### Construction year:  
 
 Replace zeros with NaNs. 
 It might also be a good idea to bin the construction_year feature, but I will leave it as it is for this first pass.
@@ -355,7 +354,7 @@ merged_clean.construction_year.value_counts(dropna=False)
 
 
 
-#### Adding feature for missing construction year data
+#### Adding feature for missing construction year data:
 
 
 ```python
@@ -366,7 +365,7 @@ merged_clean['missing_construction_year'] = merged_clean['construction_year'].ap
 
 
 
-### Summary of the number of missing values for each column
+### Summary of the number of missing values for each column:
 
 
 ```python
@@ -757,7 +756,7 @@ When they are not the same, it's usually because 'DWE' appears as the installer.
 
 Also there are some cases where the same entitiy was probably entered differently- for example "Danida" and "Danid" or "Jaica" and "JAICA CO" or "Government of Tanzania" and "Government" or "Wateraid" and "Water Aid" I won't try to fix these for now, but this is something one would do ideally.
 
-### Dealing with categorical variables.
+### Dealing with categorical variables:
 Convert categorical variables into dummy/indicator variables. At the same time, we'll be adding columns to indicate NaNs. 
 
 
@@ -784,7 +783,7 @@ I now have 7069 features.
 merged_clean_dum.to_csv('merged_clean_dum.csv')
 ```
 
-### A note on other features of interest  for this project
+### A note on other features of interest  for this project:
 It's easy to imagine that we could improve our predictions with other sources of data here. Some that come to mind in this case are:  
 - Presence of other utilities nearby  
 - Rate of previous breakdowns  
@@ -824,7 +823,7 @@ train = data.drop('status_group',1)
 labels = data.status_group
 ```
 
-### Model preprocessing and selection
+### Model preprocessing and selection:
 
 
 ```python
@@ -835,7 +834,7 @@ X_train, X_test, y_train, y_test = \
     train_test_split(X, y, test_size=0.3, random_state=0)
 ```
 
-### I. GridSearchCV w/the one-hot encoded data
+### I. GridSearchCV w/the one-hot encoded data:
 Imputation, dimensionality reduction, and selection of hyperparameters for a random forest classifier (Note- I'm not testing hyperparameters exhaustively for now):
 
 
@@ -885,7 +884,7 @@ print(gs.best_params_)
     {'random_forest__max_features': 'log2', 'pca__n_components': 100}
 
 
-### Classification report
+### Classification report:
 The model has an f1-score of about 0.8 for labels 0 and 2 (non-functional and functional), but does poorly on label 1- functional but needs repairs.
 
 
@@ -907,7 +906,7 @@ print(classification_report(y_test, y_pred))
     
 
 
-### Steps
+### Steps:
 1. Median imputation  
 2. PCA with n_components=100  
 3. Random Forest w/max_features=log2  
@@ -998,7 +997,7 @@ print(important_names)
       if __name__ == '__main__':
 
 
-### Top features
+### Top features:
 
 Some of the top features are: amount_tsh (total static head, or amount water available to waterpoint), gps_height (altitude of the well), region and district codes, population, construction year, missing construction year, and funder.
 
@@ -1008,7 +1007,7 @@ This is not unique to using random forests for feature selection, but applies to
 ### Problems with one-hot encoding:
 When we one-hot encoded categorical variables, the resulting sparsity makes continuous variables assigned higher feature importance. Moreover, a single level of a categorical variable must meet a very high bar to be selected for splitting early in the tree building, which can degrade predictive performance. Lastly, by one-hot encoding, we created many binary variables, and they were all seen as independent (from the splitting algorithm's point of view). 
 
-### Confusion matrix
+### Confusion matrix:
 
 
 ```python
@@ -1045,7 +1044,7 @@ plt.show()
 
 The model has the most trouble classifying water pumps in class 1 (pumps that need repair).
 
-### II. H2O implementation of random forest without one-hot encoding
+### II. H2O implementation of random forest without one-hot encoding:
 
 The H2O random forest implementation lets you input categorical data without one-hot encoding. It also treats missing values differently than sklearn's (as a separate category).
 
@@ -1094,7 +1093,7 @@ h2o.init(max_mem_size = "2G", nthreads=-1)
 <td>3.5.2 final</td></tr></table></div>
 
 
-### Import data  
+### Import data:  
 This is a cleaned up version of the data without one-hot encoding.
 
 
@@ -1105,7 +1104,7 @@ data2 = h2o.import_file(os.path.realpath('merged_clean.csv'))
     Parse progress: |█████████████████████████████████████████████████████████| 100%
 
 
-### Encode response variable  
+### Encode response variable:  
 Since we want to train a classification mode, we must ensure that the response is coded as a factor.
 
 
@@ -1121,7 +1120,7 @@ data2['status_group'].levels() # show the levels
 
 
 
-### Partition data
+### Partition data:  
 
 
 ```python
@@ -1136,7 +1135,7 @@ X = data2.col_names[1:-1] # All columns except first (id) and last (reponse vari
 y = data2.col_names[-1] # Response variable
 ```
 
-### Model
+### Model:  
 
 I'll quickly build a model for now and come back to tuning hyperparameters later. 
 
