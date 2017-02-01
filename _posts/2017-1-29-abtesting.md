@@ -4,7 +4,7 @@ title: AB testing teaching methods with PYMC3
 ---
 
 Data: Student test scores  
-Techniques: Bayesian analysis, MCMC
+Techniques: Bayesian estimation, MCMC
 
 This study explored whether the order of presenting materials in a high school biology class made a difference in test scores. I analyzed the test scores for two groups of students and used Bayesian methods to estimate the differences and uncertainty in the scores.
 
