@@ -6,8 +6,7 @@ title: AB testing teaching methods with PYMC3
 Data: Student test scores  
 Techniques: Bayesian estimation, MCMC
 
-Code:
-
+Code:  
 [AB Testing Teaching Methods](https://github.com/JoomiK/AB-testing-teaching-methods/blob/master/AB_Testing_teaching_methods.ipynb)  
 
 ---
