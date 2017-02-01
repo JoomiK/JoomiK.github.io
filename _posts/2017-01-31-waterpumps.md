@@ -791,6 +791,8 @@ It's easy to imagine that we could improve our predictions with other sources of
 - Whether the water pump is in a hazardous or flooding area
 - Crime rate in the near vicinity  
 
+---
+
 
 ## Part II - Model selection and evaluation
 
