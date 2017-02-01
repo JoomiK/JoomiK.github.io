@@ -3,7 +3,7 @@ layout: post
 title: Statistical analysis of gene expression data
 ---
 
-Data: Public RNASeq data  
+Data: RNASeq data  
 Techniques: Multiple comparison testing, clustering, PCA
 
 Analyzing gene expression data in R- data transformations, multiple comparison testing, differential expression analysis, clustering, and PCA.
