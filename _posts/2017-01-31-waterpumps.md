@@ -17,6 +17,7 @@ Using data on water pumps in communities across Tanzania, can we predict the pum
 There are 39 features in total. They are described [here](https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/page/25/#features_list).
 
 Among the features are:  
+
 * Construction year  
 * Total static head (amount water available to waterpoint)  
 * Funder of the well  
