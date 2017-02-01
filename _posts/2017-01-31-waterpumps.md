@@ -5,7 +5,7 @@ title: Predicting non-functional water pumps in Tanzania
 Data: From a competition for [drivendata.org](https://www.drivendata.org/competitions/7/)  
 Techniques: Classification, random forest, imputation, PCA   
 
-#### Links to Code:  
+### Links to Code:  
 [Part I- EDA and cleanup](https://github.com/JoomiK/PredictingWaterPumps/blob/master/WaterPumps.ipynb)  
 - The data  
 - Visualizing water pumps and regions  
