@@ -65,27 +65,22 @@ scores.head()
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>81</td>
       <td>90</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>80</td>
       <td>90</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>90</td>
       <td>85</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>99</td>
       <td>83</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>95</td>
       <td>74</td>
     </tr>
