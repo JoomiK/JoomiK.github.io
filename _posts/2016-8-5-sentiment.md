@@ -14,7 +14,7 @@ Classification/sentiment analysis of tweets.
 
 ---
 
-## Part 1- EDA and cleanup of tweets about Trump and Clinton
+### Part 1- EDA and cleanup of tweets about Trump and Clinton
 
 During the 2016 Presidential campaign, I collected a little over 270,000 tweets using the Twitter API and filtered for tweets that contained 'Trump', 'DonaldTrump', 'Hillary', 'Clinton', or 'HillaryClinton'.  The tweets were collected in July of 2016.
 Twitter parameters: https://dev.twitter.com/streaming/overview/request-parameters#track
@@ -526,7 +526,7 @@ Words that co-occurred most frequently with Trump.
 ---
 
 
-## Part 2- Sentiment Analysis of Tweets about Trump and Clinton  
+### Part 2- Sentiment Analysis of Tweets about Trump and Clinton  
 Now I'll perform sentiment analysis of the tweets.
 
 
