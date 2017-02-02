@@ -44,15 +44,11 @@ from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
-from IPython.core.display import display, HTML
-import warnings
 
-rcParams['figure.figsize'] = 12, 4
 print('Python version: %s.%s.%s' % sys.version_info[:3])
 print('numpy version:', np.__version__)
 print('pandas version:', pd.__version__)
 print('scikit-learn version:', sk.__version__)
-warnings.filterwarnings("ignore")
 ```
 
     Python version: 3.5.2
