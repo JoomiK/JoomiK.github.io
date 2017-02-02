@@ -11,9 +11,6 @@ Techniques: Random forest, classification
 
 ---
 
-
-## Predicting income bracket
-
 Here I build quick models (using sklearn and H2O) to determine income bracket from imbalanced data- the income levels are binned at below 50k and above 50k.
 
 Some of the features are:
