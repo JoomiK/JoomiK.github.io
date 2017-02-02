@@ -11,7 +11,8 @@ For my PhD research, I designed and led experiments that led to a [patent](http:
 My undergraduate background was in environmental studies and philosophy, with minors in physics and biology. I love writing, psychology, math, and travel.  I've written physics articles for Natural History magazine, published in academic journals, and [contributed to educational sites](https://ivyed.net/engaging-girls-in-stem/). Oh, and I spend way too much time reading about politics. 
 
 
+[Resume](https://www.docdroid.net/2oGrbNi/joomi-kim-resume.pdf.html)
+
+
 ### Contact me
 [joomikim1@gmail.com](mailto:joomikim1@gmail.com)
-
-[Resume](https://www.docdroid.net/2oGrbNi/joomi-kim-resume.pdf.html)
