@@ -52,42 +52,7 @@ scores.head()
 ```
 
 
-
-
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>group1</th>
-      <th>group2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>81</td>
-      <td>90</td>
-    </tr>
-    <tr>
-      <td>80</td>
-      <td>90</td>
-    </tr>
-    <tr>
-      <td>90</td>
-      <td>85</td>
-    </tr>
-    <tr>
-      <td>99</td>
-      <td>83</td>
-    </tr>
-    <tr>
-      <td>95</td>
-      <td>74</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+![png](/images/test_scores.png)
 
 
 Both groups had 93 students, and the mean for group2 (81.8) is 2.8 points higher than the mean for group1 (79). We can also see that group2's min and standard deviation were lower than group1's min and standard deviation.
@@ -100,63 +65,7 @@ scores.describe()
 ```
 
 
-
-
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>group1</th>
-      <th>group2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count </th>
-      <td>93.000000</td>
-      <td>93.000000</td>
-    </tr>
-    <tr>
-      <th>mean </th>
-      <td>79.000000</td>
-      <td>81.806452</td>
-    </tr>
-    <tr>
-      <th>std </th>
-      <td>9.639141</td>
-      <td>8.849291</td>
-    </tr>
-    <tr>
-      <th>min </th>
-      <td>52.000000</td>
-      <td>60.000000</td>
-    </tr>
-    <tr>
-      <th>25% </th>
-      <td>72.000000</td>
-      <td>76.000000</td>
-    </tr>
-    <tr>
-      <th>50% </th>
-      <td>79.000000</td>
-      <td>82.000000</td>
-    </tr>
-    <tr>
-      <th>75% </th>
-      <td>85.000000</td>
-      <td>88.000000</td>
-    </tr>
-    <tr>
-      <th>max </th>
-      <td>99.000000</td>
-      <td>99.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+![png](/images/scores_describe..png)
 
 
 ```python
