@@ -641,14 +641,6 @@ SVM_classifier.train(training_set)
 The accuracies were similar for the different models:
 
 
-```python
-print("NLTK Naive Bayes algorithm accuracy percent: ", (nltk.classify.accuracy(classifier, testing_set))*100)
-print("Multinomial Naive Bayes accuracy percent:",(nltk.classify.accuracy(MNB_classifier, testing_set))*100)
-print("Bernoulli Naive Bayes accuracy percent:",(nltk.classify.accuracy(BNB_classifier, testing_set))*100)
-print("Logistic Regression accuracy percent:",(nltk.classify.accuracy(LR_classifier, testing_set))*100)
-print("SVM accuracy percent:",(nltk.classify.accuracy(SVM_classifier, testing_set))*100)
-```
-
     NLTK Naive Bayes algorithm accuracy percent:  67.37160120845923
     Multinomial Naive Bayes accuracy percent: 68.42900302114803
     Bernoulli Naive Bayes accuracy percent: 67.97583081570997
@@ -682,24 +674,6 @@ classifier.show_most_informative_features(15)
                        mixed = True              neg : pos    =      8.4 : 1.0
 
 
-### Classify tweets:
-
-
-```python
-# Prep the list of tokens.  
-# originals is a pandas dataframe with the tweets
-trump_tokens_list = originals['lower_trump_tokens'].tolist()
-clinton_tokens_list = originals['lower_clinton_tokens'].tolist()
-
-# Getting rid of empty lists
-trump_list = [x for x in trump_tokens_list if x !=[]]
-clinton_list = [x for x in clinton_tokens_list if x !=[]]
-
-# I'm just going to classify 500 tweets for each candidate 
-# mostly because I don't want to wait forever
-trump = trump_list[0:500]
-clinton = clinton_list[0:500]
-```
 
 
 ### Tweets about Trump:
@@ -733,6 +707,8 @@ ax.legend(loc='best')
     Percent negative BNB classifier: 90.0
     Percent negative LR classifier: 66.2
     Percent negative SVM classifier: 74.4
+
+Red is negative and green is positive.
 
 
 ### Tweets about Clinton:
@@ -768,6 +744,8 @@ ax.legend(loc='best')
     Percent negative BNB classifier: 94.19999999999999
     Percent negative LR classifier: 69.8
     Percent negative SVM classifier: 75.0
+
+Red is negative and green is positive.
 
 
 The tweets were overwhelmingly classified as negative for both candidates. Of course these classifiers are not great for tweets, because they were trained on short movie reviews. In particular I'm guessing that movie reviews don't use as many acronyms as tweets. And I can also imagine that they're generally less sarcastic than tweets.
