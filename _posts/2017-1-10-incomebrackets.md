@@ -117,7 +117,7 @@ test = pd.read_csv('test.csv')
 train.head()
 ```
 
-![png](/images/income.png)
+![png](/images/income_head.png)
 
 
 ```python
