@@ -113,42 +113,42 @@ scores.describe()
   </thead>
   <tbody>
     <tr>
-      <th>count</th>
+      <th>count </th>
       <td>93.000000</td>
       <td>93.000000</td>
     </tr>
     <tr>
-      <th>mean</th>
+      <th>mean </th>
       <td>79.000000</td>
       <td>81.806452</td>
     </tr>
     <tr>
-      <th>std</th>
+      <th>std </th>
       <td>9.639141</td>
       <td>8.849291</td>
     </tr>
     <tr>
-      <th>min</th>
+      <th>min </th>
       <td>52.000000</td>
       <td>60.000000</td>
     </tr>
     <tr>
-      <th>25%</th>
+      <th>25% </th>
       <td>72.000000</td>
       <td>76.000000</td>
     </tr>
     <tr>
-      <th>50%</th>
+      <th>50% </th>
       <td>79.000000</td>
       <td>82.000000</td>
     </tr>
     <tr>
-      <th>75%</th>
+      <th>75% </th>
       <td>85.000000</td>
       <td>88.000000</td>
     </tr>
     <tr>
-      <th>max</th>
+      <th>max </th>
       <td>99.000000</td>
       <td>99.000000</td>
     </tr>
