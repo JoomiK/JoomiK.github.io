@@ -14,8 +14,8 @@ Code:
 
 This document goes through the workflow for differential expression of RNA-Seq (gene expression) data, starting with raw counts of sequencing reads.
 
-### The Pasilla dataset:
-It contains RNA-Seq count data for RNAi treated and untreated *Drosophila melanogaster* cells.
+The Pasilla dataset:
+Contains RNA-Seq count data for RNAi treated and untreated *Drosophila melanogaster* cells.
 
 Install `gplots`, `RColorBrewer` and Bioconductor packages `DESeq` and `pasilla` if needed.
 
