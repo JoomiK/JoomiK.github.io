@@ -542,7 +542,7 @@ print(gs.best_params_)
 
 
 ### Classification report:
-The model has an f1-score of about 0.8 for labels 0 and 2 (non-functional and functional), but does poorly on label 1- functional but needs repairs.
+The model has an f1-score of about 0.8 for labels 0 and 2 (non-functional and functional), but does poorly on label 1.
 
 
 ```python
