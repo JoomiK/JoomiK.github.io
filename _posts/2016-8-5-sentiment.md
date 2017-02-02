@@ -156,7 +156,7 @@ mydf['text'].describe()
 
 
 
-#### Adding columns that show whether the tweet contains a name of interest
+### Adding columns that show whether the tweet contains a name of interest:
 
 I decided to add columns of Booleans that indicated whether a name was in the tweet or not.
 
@@ -184,7 +184,7 @@ print_val_counts_for_True(mydf, list_of_cols)
     hillaryclinton 23025
 
 
-#### Some cleanup: removing retweets
+### Some cleanup: removing retweets:
 
 
 ```python
@@ -236,7 +236,7 @@ Of course, while doing this I might be taking out tweets that are about the othe
 originals['bill'] = originals['text'].apply(lambda tweet: word_in_text('bill', tweet))
 ```
 
-#### Counting names
+### Counting names:
 
 
 ```python
@@ -271,7 +271,7 @@ originals['Any_Clinton_no_bill'] = np.where((originals['trump']== False) & (orig
 originals['Any_Trump'] = np.where((originals['hillary']==False) & (originals['clinton']== False) & (originals['hillaryclinton']==False), True, False)
 ```
 
-#### Extract links
+### Extract links:
 
 
 ```python
@@ -299,7 +299,7 @@ print_val_counts_for_True(originals, list_of_cols)
     Any_Clinton_no_bill 47394
 
 
-#### A plot for counts for names of interest
+### A plot for counts for names of interest:
 
 
 ```python
@@ -363,7 +363,7 @@ plt.savefig('tweet_by_name_1', format='png')
 ![png](/images/TCoutput_27_0.png)
 
 
-#### Languages
+### Languages:
 
 
 ```python
@@ -388,7 +388,7 @@ tweets_by_lang[:5].plot(ax=ax, kind='bar', color='red')
 ![png](/images/TCoutput_29_1.png)
 
 
-#### Pre-processing tweets
+### Pre-processing tweets:
 
 
 ```python
@@ -423,7 +423,7 @@ emoticon_re = re.compile(r'^'+emoticons_str+'$', re.VERBOSE | re.IGNORECASE)
 originals['tweet_tokens'] = originals['text'].apply(lambda tweet: tweet_tokenize(tweet))
 ```
 
-#### Adding columns for tokens
+### Adding columns for tokens:
 
 
 ```python
@@ -473,7 +473,7 @@ originals['lower_clinton_tokens'] = originals['just_clinton_tokens'].apply(lambd
 ```
 
 
-#### Getting ready to count most frequent words by getting rid of stopwords, punctuation
+### Getting ready to count most frequent words by getting rid of stopwords, punctuation:
 
 
 ```python
@@ -492,7 +492,7 @@ trump_names_list = ['trump', 'donald', 'donaldtrump', '#trump', '@realdonaldtrum
 clinton_names_list= ['clinton', 'hillary', 'hillaryclinton', '@hillaryclinton']
 ```
 
-#### Most frequent words associated with both candidates
+### Most frequent words associated with both candidates:
 
 
 ```python
@@ -574,8 +574,6 @@ def classify_list(classifier, token_list):
     return values
 ```
 
-#### The data
-
 
 ```python
 originals_df = open("originals.pickle", "rb")
@@ -585,7 +583,7 @@ originals_df.close()
 
 
 
-#### Training and testing 
+### Training and testing:
 
 Note: I did not have labeled tweets for this project, but I did find a collection of short movie reviews that had been labeled as negative or positive. I will use these to train my model; this is far from perfect since tweets are probably really different from short movie reviews, but it's better than nothing. 
 
@@ -632,7 +630,7 @@ training_set = featuresets[:10000]
 testing_set = featuresets[10000:]
 ```
 
-#### Testing a few algorithms
+### Testing a few algorithms:
 Trying a few different implementations of Naive Bayes.
 
 
@@ -681,7 +679,7 @@ print("SVM accuracy percent:",(nltk.classify.accuracy(SVM_classifier, testing_se
     SVM accuracy percent: 67.97583081570997
 
 
-#### Most informative features 
+### Most informative features:
 A glance at which words were most informative:
 
 
@@ -707,7 +705,7 @@ classifier.show_most_informative_features(15)
                        mixed = True              neg : pos    =      8.4 : 1.0
 
 
-#### Classify tweets
+### Classify tweets:
 
 
 ```python
@@ -758,7 +756,7 @@ all_clinton_neg = pd.Series((MNB_clinton_vals.count('neg'), BNB_clinton_vals.cou
                             LR_clinton_vals.count('neg'), SVM_clinton_vals.count('neg')))
 ```
 
-#### Tweets about Trump
+### Tweets about Trump:
 
 
 ```python
@@ -798,7 +796,7 @@ print("Percent negative SVM classifier:",(SVM_trump_vals.count('neg')/len(SVM_tr
     Percent negative SVM classifier: 74.4
 
 
-#### Tweets about Clinton
+### Tweets about Clinton:
 
 
 ```python
