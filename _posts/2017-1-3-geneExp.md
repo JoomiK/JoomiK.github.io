@@ -14,13 +14,13 @@ Code:
 
 This document goes through the workflow for differential expression of RNA-Seq (gene expression) data, starting with raw counts of sequencing reads.
 
-#### The Pasilla dataset
+### The Pasilla dataset:
 It contains RNA-Seq count data for RNAi treated and untreated *Drosophila melanogaster* cells.
 
 Install `gplots`, `RColorBrewer` and Bioconductor packages `DESeq` and `pasilla` if needed.
 
 
-#### The Workflow
+### The Workflow:
 Much of the workflow follows the vignette in this [DESeq manual.](http://bioconductor.org/packages/release/bioc/vignettes/DESeq/inst/doc/DESeq.pdf)
 
 First get the path to the file containing the raw count data. The file countains counts for each gene(row) in each sample (column). Here we're loading the file using read.table and storing as count.table. Header = TRUE if the first row of your file contains the names of variables.
