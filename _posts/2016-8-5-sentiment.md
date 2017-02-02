@@ -702,38 +702,6 @@ clinton = clinton_list[0:500]
 ```
 
 
-```python
-NB_trump_vals = classify_list(classifier, trump)
-NB_clinton_vals = classify_list(classifier, clinton)
-
-MNB_trump_vals = classify_list(MNB_classifier, trump)
-MNB_clinton_vals = classify_list(MNB_classifier, clinton)
-
-BNB_trump_vals = classify_list(BNB_classifier, trump)
-BNB_clinton_vals = classify_list(BNB_classifier, clinton)
-
-LR_trump_vals = classify_list(LR_classifier, trump)
-LR_clinton_vals = classify_list(LR_classifier, clinton)
-
-SVM_trump_vals = classify_list(SVM_classifier, trump)
-SVM_clinton_vals = classify_list(SVM_classifier, clinton)
-```
-
-
-```python
-all_trump_pos = pd.Series((MNB_trump_vals.count('pos'), BNB_trump_vals.count('pos'),
-                            LR_trump_vals.count('pos'), SVM_trump_vals.count('pos')))
-
-all_trump_neg = pd.Series((MNB_trump_vals.count('neg'), BNB_trump_vals.count('neg'),
-                            LR_trump_vals.count('neg'), SVM_trump_vals.count('neg')))
-
-all_clinton_pos = pd.Series((MNB_clinton_vals.count('pos'), BNB_clinton_vals.count('pos'),
-                            LR_clinton_vals.count('pos'), SVM_clinton_vals.count('pos')))
-
-all_clinton_neg = pd.Series((MNB_clinton_vals.count('neg'), BNB_clinton_vals.count('neg'),
-                            LR_clinton_vals.count('neg'), SVM_clinton_vals.count('neg')))
-```
-
 ### Tweets about Trump:
 
 
