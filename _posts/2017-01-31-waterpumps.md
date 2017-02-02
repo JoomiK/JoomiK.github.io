@@ -800,11 +800,6 @@ rf_v1
 ![png](/images/waterpumps_cfm.png)
 
 
-    Top-3 Hit Ratios: 
-
-![png](/images/waterpumps_hitratio.png)
-
-
 
     Variable Importances: 
 
