@@ -27,9 +27,9 @@ Can we predict which way a person leans, politically, from what they say on soci
 ### Why does this work at all?
 How is it that we can distinguish between Green and Libertarian party followers?  
 
-Turns out, they talk about different things (though there is a lot of overlap). I used Latent Dirichlet Allocation to explore topics of third party followers. See the interactive graphic of topics:
+Turns out, they talk about different things (though there is a lot of overlap). I used Latent Dirichlet Allocation to explore topics of third party followers. 
 
-[Explore Topics](http://partypoll.co/topics)
+Check it out: [Explore Topics](http://partypoll.co/topics)
 
 
 ![png](/images/lb.png)
