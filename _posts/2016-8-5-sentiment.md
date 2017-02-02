@@ -4,7 +4,7 @@ title: Sentiment analysis of political tweets
 --- 
 
 Data: Twitter API  
-Techniques: NLP, sentiment analysis, scraping
+Techniques: NLP, sentiment analysis with various models, scraping
 
 Here I used the Twitter API to collect tweets about Trump and Clinton, explored word co-occurrences, and performed sentiment analysis. 
 
