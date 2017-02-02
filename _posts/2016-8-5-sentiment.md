@@ -6,12 +6,6 @@ title: Sentiment analysis of political tweets
 Data: Twitter API  
 Techniques: NLP, sentiment analysis with various models, scraping
 
-Code:  
-[Part I](https://github.com/JoomiK/Trump_Clinton_Tweets/blob/master/Trump_Clinton_tweets.ipynb)
-Data cleanup/pre-processing and word counts.  
-[Part II](https://github.com/JoomiK/Trump_Clinton_Tweets/blob/master/Trump_Clinton_Tweets_2.ipynb)
-Classification/sentiment analysis of tweets.
-
 ---
 
 ### Part 1- EDA and cleanup of tweets about Trump and Clinton
@@ -44,6 +38,28 @@ import sqlite3 as sql
 
 
 ```python
+def add_column_for_name(df, names_list, text_column):
+    """
+    Add column(s) that indicates whether name(s) is/are in text_column
+    Args:
+        df: pandas dataframe
+        names_list: list of strings (names) 
+        text_column: column containing text
+    Returns:
+        df with column of Booleans 
+    """
+    for name in names_list:
+        mydf[name] = mydf['text'].apply(lambda tweet: word_in_text(name, tweet))
+    return df
+
+def remove_retweets(df, column, list_of_str):
+    """
+    Function to remove tweets that contain string in list_of_str
+    """
+    for string in list_of_str:
+        df = df[df['text'].str.contains(string)==False]
+    return df
+    
 def print_val_counts_for_True(df, list_of_cols):
     """
     Print number of Trues for columns in list_of_cols in dataframe df
@@ -118,6 +134,17 @@ def most_frequent(terms_all, names_list):
     # Update the counter
     count_all.update(interesting_terms)
     return count_all.most_common(20)
+    
+def make_col_lowercase(df, list_of_cols):
+    """
+    Function to get lowercase of columns in list_of_cols
+    Args:
+        df: pandas dataframe
+        list_of_cols: list of column names (string)
+    """
+    for string in list_of_cols:
+        df['lower_'+ string] = df[string].apply(lambda tweet: lower_text(tweet))
+    return df
 ```
 
 
@@ -125,7 +152,6 @@ def most_frequent(terms_all, names_list):
 # Data is stored in an sqlite database. Reading sqlite query into a dataframe:
 conn = sql.connect('tweets.db')
 mydf = pd.read_sql_query('SELECT lang, text FROM lang_text', conn)
-
 conn.close()
 
 mydf.count()
@@ -158,16 +184,16 @@ mydf['text'].describe()
 
 ### Adding columns that show whether the tweet contains a name of interest:
 
-I decided to add columns of Booleans that indicated whether a name was in the tweet or not.
+I decided to add columns of Booleans that indicated whether a name was in the tweet or not.  
+
+I'm also interested in weeding out tweets that might be about Bill Clinton.  
+Of course, while doing this I might be taking out tweets that are about the other kind of bill (legislative), but I'm going to assume that's a negligible number.
 
 
 ```python
 # Add columns for names of interest
-mydf['trump'] = mydf['text'].apply(lambda tweet: word_in_text('trump', tweet))
-mydf['hillary'] = mydf['text'].apply(lambda tweet: word_in_text('hillary', tweet))
-mydf['clinton'] = mydf['text'].apply(lambda tweet: word_in_text('clinton', tweet))
-mydf['donaldtrump'] = mydf['text'].apply(lambda tweet: word_in_text('donaldtrump', tweet))
-mydf['hillaryclinton'] = mydf['text'].apply(lambda tweet: word_in_text('hillaryclinton', tweet))
+names_list = ['trump','hillary','clinton','donaldtrump','hillaryclinton','bill']
+add_column_for_name(mydf, names_list ,'text')
 ```
 
 
@@ -203,12 +229,10 @@ len(unique_tweets)
 
 
 ```python
-# Series.str.startswith(string) returns a boolean.
-# 'Originals' df only contains tweets that do not start with/contains 'rt'
-originals = unique_tweets[unique_tweets['text'].str.startswith('RT')==False]
-originals = originals[originals['text'].str.startswith('rt')==False]
-originals = originals[originals['text'].str.contains(' RT ')==False]
 
+# Remove retweets
+list_of_str = ['RT', 'rt', ' RT ']
+originals = remove_retweets(unique_tweets, 'text', list_of_str)
 originals = originals.reset_index(drop = True)
 originals.head()
 ```
@@ -228,8 +252,6 @@ len(originals)
 
 
 
-I'm also interested in weeding out tweets that might be about Bill Clinton.  
-Of course, while doing this I might be taking out tweets that are about the other kind of bill (legislative), but I'm going to assume that's a negligible number.
 
 
 ```python
@@ -254,23 +276,6 @@ print_val_counts_for_True(originals, list_of_cols)
 
 
 
-```python
-originals['just_trump'] = np.where((originals['trump']==True) & (originals['donaldtrump']== False), True, False)
-
-originals['just_clinton'] = np.where((originals['hillary']==False) & (originals['clinton']== True) &
-                                    (originals['hillaryclinton']==False) & (originals['trump']==False) &
-                                    (originals['donaldtrump']==False), True, False)
-
-originals['just_hillary'] = np.where((originals['hillary']==True) & (originals['clinton']== False) &
-                                    (originals['hillaryclinton']==False) & (originals['trump']==False) &
-                                    (originals['donaldtrump']==False), True, False)
-
-
-originals['Any_Clinton'] = np.where((originals['trump']== False) & (originals['donaldtrump']==False), True, False)
-originals['Any_Clinton_no_bill'] = np.where((originals['trump']== False) & (originals['donaldtrump']==False) & (originals['bill']==False), True, False)
-originals['Any_Trump'] = np.where((originals['hillary']==False) & (originals['clinton']== False) & (originals['hillaryclinton']==False), True, False)
-```
-
 ### Extract links:
 
 
@@ -278,6 +283,7 @@ originals['Any_Trump'] = np.where((originals['hillary']==False) & (originals['cl
 originals['link'] = originals['text'].apply(extract_link)
 ```
 
+Note: I added columns that indicated whether the tweet contained only one name and not the others (for example, just "clinton" and not "hillary" or "trump" or "bill") as well as columns that indicated whether a name was present or not, regardless of whether other names were there.
 
 ```python
 # Getting value counts for names
