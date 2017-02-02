@@ -65,7 +65,7 @@ scores.describe()
 ```
 
 
-![png](/images/score_describe..png)
+![png](/images/score_describe.png)
 
 
 ```python
