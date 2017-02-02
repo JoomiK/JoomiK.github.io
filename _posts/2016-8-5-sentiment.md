@@ -473,9 +473,8 @@ clinton_list = [x.lower() for x in clinton_list]
 
 
 ```python
-originals['lower_tweet_tokens'] = originals['tweet_tokens'].apply(lambda tweet: lower_text(tweet))
-originals['lower_trump_tokens'] = originals['just_trump_tokens'].apply(lambda tweet: lower_text(tweet))
-originals['lower_clinton_tokens'] = originals['just_clinton_tokens'].apply(lambda tweet: lower_text(tweet))
+list_of_cols = ['tweet_tokens', 'just_trump_tokens', 'just_clinton_tokens']
+originals = make_col_lowercase(originals, list_of_cols)
 ```
 
 
