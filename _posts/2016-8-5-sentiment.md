@@ -580,12 +580,6 @@ def classify_list(classifier, token_list):
 ```
 
 
-```python
-originals_df = open("originals.pickle", "rb")
-originals = pickle.load(originals_df)
-originals_df.close()
-```
-
 
 
 ### Training and testing:
@@ -714,7 +708,8 @@ classifier.show_most_informative_features(15)
 
 
 ```python
-# Prep the list of tokens
+# Prep the list of tokens.  
+# originals is a pandas dataframe with the tweets
 trump_tokens_list = originals['lower_trump_tokens'].tolist()
 clinton_tokens_list = originals['lower_clinton_tokens'].tolist()
 
