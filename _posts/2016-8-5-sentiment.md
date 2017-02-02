@@ -473,7 +473,7 @@ originals['lower_clinton_tokens'] = originals['just_clinton_tokens'].apply(lambd
 ```
 
 
-### Getting ready to count most frequent words by getting rid of stopwords, punctuation:
+Getting ready to count most frequent words by getting rid of stopwords, punctuation:
 
 
 ```python
