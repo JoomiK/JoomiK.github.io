@@ -116,10 +116,11 @@ There is some "clumpiness" here; in the southeast you'll notice that there seems
 
 ![png](/images/waterpumps_pairwise.png)
 The variables plotted here are:  
-* amount_tsh: total static head (amount water available to waterpoint)  
-* gps_height: altitude of well  
-* num_private: (this feature is not described)  
-* population: population around the well  
+
+- amount_tsh: total static head (amount water available to waterpoint)  
+- gps_height: altitude of well  
+- num_private: (this feature is not described)  
+- population: population around the well  
 
 It looks like the water pumps with high static head tend to be functional (label 2). (It would also be worth looking into whether the really high tsh values are realistic.)
 
