@@ -499,23 +499,6 @@ clinton_names_list= ['clinton', 'hillary', 'hillaryclinton', '@hillaryclinton']
 
 ### Most frequent words associated with both candidates:
 
-
-```python
-print(most_frequent(clinton_list, clinton_names_list))
-```
-
-    [('bernie', 6154), ('sanders', 5127), ('endorses', 1906), ('@berniesanders', 1710), ('like', 1663), ('president', 1355), ('lynch', 1323), ('vote', 1318), ('people', 1085), ('fbi', 1078), ('know', 1040), ('supporters', 1038), ('endorsement', 1005), ('democratic', 956), ('voting', 913), ('endorsed', 909), ('endorsing', 877), ('think', 800), ('email', 793), ('support', 746)]
-
-
-
-```python
-most_frequent_trump =(most_frequent(trump_list, trump_names_list))
-print(most_frequent_trump)
-```
-
-    [('vp', 3138), ('like', 2219), ('pence', 1968), ('ginsburg', 1828), ('vote', 1724), ('gop', 1686), ('people', 1351), ('gingrich', 1317), ('bernie', 1316), ('news', 1227), ('ruth', 1202), ('president', 1167), ('bader', 1134), ('support', 1067), ('convention', 1064), ('think', 1045), ('republican', 1041), ('ryan', 1017), ('newt', 984), ('wall', 968)]
-
-
 Words that co-occurred most frequently with Clinton
 
 
