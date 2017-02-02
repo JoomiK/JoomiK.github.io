@@ -455,7 +455,4 @@ print(RF_perf)
 This one actually performs worse in predicting class 1 compared to the sklearn implementation. It only gets about 62% of class 1 right compared to getting 96% of class 0 right.
 
 
-```python
-
-```
 
