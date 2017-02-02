@@ -81,6 +81,8 @@ test = pd.read_csv('test_set.csv', index_col='id')
 train.head()
 ```
 ![png](/images/waterpumps_trainhead.png)
+
+
 ```python
 print("Train data labels:",len(labels))
 print("Train data rows, columns:",train.shape)
