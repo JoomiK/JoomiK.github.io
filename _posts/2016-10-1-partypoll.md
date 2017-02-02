@@ -32,6 +32,6 @@ Turns out, they talk about different things (though there is a lot of overlap). 
 [Explore Topics](http://partypoll.co/topics)
 
 
-![png](/images/lg.png)
+![png](/images/lb.png)
 
 ![png](/images/gr.png)
