@@ -6,14 +6,10 @@ title: Statistical analysis of gene expression data
 Data: RNASeq data  
 Techniques: Multiple comparison testing, clustering, PCA
 
-Analyzing gene expression data in R- data transformations, multiple comparison testing, differential expression analysis, clustering, and PCA.
-
+Code:  
 [Analysis of gene expression data](https://github.com/JoomiK/GeneExpression) 
 
 ---
-
-## RNASeq Analysis in R
-
 
 
 This document contains instructions for differential expression of RNA-Seq (gene expression) data, starting with raw counts of sequencing reads.
@@ -143,7 +139,10 @@ plotDispEsts( cds )
 
 
 See whether there is differential expression between untreated and treated. 
-Output is a data.frame. Also get nominal p-val and FDR vals.
+We need to correct for the fact that we are doing multiple comparison tests. In the case of gene expression data, it's typical to control for the FDR by using methods like Benjamini-Hochberg, instead of  the Bonferroni correction, which is too conservative and generally would lead to a lot of false negatives.
+
+Output is a data.frame. 
+
 
 ```r
 res = nbinomTest( cds, "untreated", "treated" )
@@ -166,8 +165,8 @@ head(res)
 ## 5    -0.26383857 0.2414208 0.8811746
 ## 6    -0.04638999 0.7572819 1.0000000
 ```
-
-To order by p-valuess (decreasing):
+padj is the adjusted p-value (controlled for DFR)
+To order by pad-j (decreasing):
 
 ```r
 res <- res[order(res$padj),]
@@ -257,6 +256,7 @@ heatmap.2(mat, trace="none", col = rev(hmcol), margin=c(13, 13))
 
 ![Clustering](https://cloud.githubusercontent.com/assets/16356757/16339205/667839f4-39ef-11e6-9f9d-7f8e5ae4a839.png)
 
+In the case of gene expression data, it's important to verify that the first principal component is your condition- in this case, treated and untreated (and not technical method of sequencing, like paired or single end reads).
 PCA plot of the samples:
 
 ```r
