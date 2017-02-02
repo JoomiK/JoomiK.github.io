@@ -19,7 +19,7 @@ Contains RNA-Seq count data for RNAi treated and untreated *Drosophila melanogas
 
 Install `gplots`, `RColorBrewer` and Bioconductor packages `DESeq` and `pasilla` if needed.
 
-
+---
 
 ### The Workflow:
 
