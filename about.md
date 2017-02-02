@@ -14,4 +14,4 @@ My undergraduate background was in environmental studies and philosophy, with mi
 ### Contact me
 [joomikim1@gmail.com](mailto:joomikim1@gmail.com)
 
-<iframe width="420" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://pdfsr.com/embed/joomi-kim-resume/420/500"></iframe><div style="font-size: 11px; width: 420px;"><div style="float: right;">Powered by <a href="http://pdfsr.com/" target="_blank"></a></div><a href="http://pdfsr.com/download/joomi-kim-resume" target="_blank">Resume</a></div>
+<iframe width="420" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://pdfsr.com/embed/joomi-kim-resume/420/500"></iframe><div style="font-size: 11px; width: 420px;"><div style="float: right;"> <a href="http://pdfsr.com/" target="_blank"></a></div><a href="http://pdfsr.com/download/joomi-kim-resume" target="_blank">Resume</a></div>
