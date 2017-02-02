@@ -759,10 +759,6 @@ Convert categorical variables into dummy/indicator variables. At the same time, 
 
 ```python
 merged_clean_dum = pd.get_dummies(merged_clean, dummy_na=True)
-```
-
-
-```python
 merged_clean_dum.shape
 ```
 
@@ -800,12 +796,7 @@ I will try modeling two ways: (1) on one-hot encoded data, with and without dime
 ```python
 # Load the one-hot encoded data
 data = pd.read_csv('merged_clean_dum.csv', index_col='id')
-```
-
-
-
-```python
-print("Data rows, columns:",data.shape)
+print("Data rows, columns:", data.shape)
 ```
 
     Data rows, columns: (59400, 7069)
