@@ -165,7 +165,7 @@ head(res)
 ## 5    -0.26383857 0.2414208 0.8811746
 ## 6    -0.04638999 0.7572819 1.0000000
 ```
-padj is the adjusted p-value (controlled for DFR)
+padj is the adjusted p-value (controlled for DFR).
 To order by pad-j (decreasing):
 
 ```r
