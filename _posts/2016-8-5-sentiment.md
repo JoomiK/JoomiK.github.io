@@ -253,11 +253,6 @@ len(originals)
 
 
 
-
-```python
-originals['bill'] = originals['text'].apply(lambda tweet: word_in_text('bill', tweet))
-```
-
 ### Counting names:
 
 
