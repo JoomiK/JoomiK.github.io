@@ -5,14 +5,12 @@ title: Time series analysis of armed robberies in Boston
 Data: Monthly armed robberies  
 Techniques: ARIMA models, stationarity tests, differencing
 
+Code:  
 [Armed Robberies Project]( https://github.com/JoomiK/RobberiesTimeSeries/blob/master/BostonRobberies.ipynb )
 
 ---
 
-
-## Armed robberies in Boston over time
 This project looks at monthly Boston armed robberies from Jan 1966-Oct 1975.
-
 [Data](https://datamarket.com/data/set/22ob/monthly-boston-armed-robberies-jan1966-oct1975-deutsch-and-alt-1977#!ds=22ob&display=line) originally from : McCleary & Hay (1980)
 
 
