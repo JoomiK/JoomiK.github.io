@@ -488,7 +488,7 @@ more_punctuation = ["’", "‘"]
 
 # A custom list of stopwords
 more_stops = ["el", "don't", "it's", "get", "via", "rt", "de", "would", "make",
-  "i'm", "2", "he's", "one", "says","amp", "say", "us", "u"]
+            "i'm", "2", "he's", "one", "says","amp", "say", "us", "u"]
 
 # The full stop list contains English stopwords, as well as my custom list of stopwords and punctuation to remove
 stop = stopwords.words('english') + punctuation + more_punctuation + more_stops
