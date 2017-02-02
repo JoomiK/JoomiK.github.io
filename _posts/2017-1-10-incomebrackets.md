@@ -296,7 +296,7 @@ plt.show()
 ```
 
 
-![png](output_22_0.png)
+![png](/images/output_22_0.png)
 
 
 The lower income bracket has lower dividend_from_stocks. Unsurprisingly, none of the youngest people (under age 20) were in the higher income bracket. Interestingly wage_per_hour is not necessarily higher for the higher income bracket.
@@ -351,7 +351,7 @@ plt.show()
 ```
 
 
-![png](output_27_0.png)
+![png](/images/output_27_0.png)
 
 
 The classifier does a bit worse with class 1 (the rare class).    
