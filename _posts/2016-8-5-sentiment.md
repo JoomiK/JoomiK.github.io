@@ -214,7 +214,7 @@ originals.head()
 ```
 
 
-![png](/images/YVhead.png)
+![png](/images/TChead.png)
 
 
 ```python
