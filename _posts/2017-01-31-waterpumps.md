@@ -98,7 +98,7 @@ print("Test data rows, columns:", test.shape)
     Train data rows, columns: (59400, 39)
     Test data rows, columns: (14850, 39)
 
-### Visualizing water pumps:  
+### **Visualizing water pumps:**   
 Apparently responsibility for water and sanitation service provision is decentralized, so local governments are responsible for water resource management. Luckily, we have information on which regions the water pumps are in. Perhaps this will be a good predictor.
 
 ![png](/images/WellMap.png)
