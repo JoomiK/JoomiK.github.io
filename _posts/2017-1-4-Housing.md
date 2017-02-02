@@ -486,7 +486,7 @@ helper.fit(X_train, y_train, n_jobs=-1)
 ```python
 helper.score_summary()
 ```
-![png](/images/bost_scores)
+![png](/images/bost_scores.png)
 
 
 Part of the output is shown above. The GBRs perform the best. In all fairness to the linear models, I could have done more to make them better, like scale and log transform some of the variables (we already saw that some of them were skewed). I also arbitrarily set n_estimators (for RandomForest and GBR) to 1000.
