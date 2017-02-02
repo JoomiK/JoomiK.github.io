@@ -4,7 +4,7 @@ title: Statistical analysis of gene expression data
 ---
 
 Data: RNASeq data  
-Techniques: Multiple comparison testing, clustering, PCA
+Techniques: Multiple comparison testing, PCA, clustering
 
 Code:  
 [Analysis of gene expression data](https://github.com/JoomiK/GeneExpression) 
