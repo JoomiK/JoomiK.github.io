@@ -17,10 +17,7 @@ Can we predict which way a person leans, politically, from what they say on soci
 ### Approach:
 
 Data Source:  
-
 I collected tweets using the TwitterAPI, from the followers of two "third party" political parties in the U.S., the Green Party, and the Libertarian Party, and used these as proxies for Green and Libertarian sympathizers. 
-
-Preprocessing:  
 
 1. I collected the last 200 tweets for each follower (this was the maximum allowable I could collect using the API).  
 2. I removed stop words, links, as well as "political talk." Why did I do that? Well, I wanted to see if we could predict which way someone leaned even if they didn't give out overt cues about their political inclinations. In other words, do the things that Green and Libertarian party followers talk about, differ enough so that we can distinguish between them (do they care about different topics)?  
