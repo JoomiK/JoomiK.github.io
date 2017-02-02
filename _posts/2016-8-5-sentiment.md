@@ -761,13 +761,6 @@ ax.legend(loc='best')
 
 
 
-```python
-print("Percent negative MNB classifier:",(MNB_trump_vals.count('neg')/len(MNB_trump_vals)*100))
-print("Percent negative BNB classifier:",(BNB_trump_vals.count('neg')/len(BNB_trump_vals)*100))
-print("Percent negative LR classifier:",(LR_trump_vals.count('neg')/len(LR_trump_vals)*100))
-print("Percent negative SVM classifier:",(SVM_trump_vals.count('neg')/len(SVM_trump_vals)*100))
-```
-
     Percent negative MNB classifier: 50.0
     Percent negative BNB classifier: 90.0
     Percent negative LR classifier: 66.2
@@ -802,12 +795,6 @@ ax.legend(loc='best')
 
 
 
-```python
-print("Percent negative MNB classifier:",(MNB_clinton_vals.count('neg')/len(MNB_clinton_vals)*100))
-print("Percent negative BNB classifier:",(BNB_clinton_vals.count('neg')/len(BNB_clinton_vals)*100))
-print("Percent negative LR classifier:",(LR_clinton_vals.count('neg')/len(LR_clinton_vals)*100))
-print("Percent negative SVM classifier:",(SVM_clinton_vals.count('neg')/len(SVM_clinton_vals)*100))
-```
 
     Percent negative MNB classifier: 43.2
     Percent negative BNB classifier: 94.19999999999999
