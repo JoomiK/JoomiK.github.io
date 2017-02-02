@@ -24,13 +24,16 @@ Can we predict which way a person leans, politically, from what they say on soci
 
 4. I used these to train a logistic regression classifier that would predict political leaning based on text data. It achieved about 84% accuracy in predicting political party.
 
+
 ### Why does this work at all?
 How is it that we can distinguish between Green and Libertarian party followers?  
 
 Turns out, they talk about different things (though there is a lot of overlap). I used Latent Dirichlet Allocation to explore topics of third party followers. 
 
+
 ### Check out the interactive visualization: [Explore Topics](http://partypoll.co/topics)  
 Code for LDA topic modeliing with gensim can be found [here](https://github.com/JoomiK/LDA/blob/master/LDA_workflow.py).
+
 
 ![png](/images/lb.png)
 
