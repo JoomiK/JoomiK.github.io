@@ -25,6 +25,7 @@ Preprocessing:
 
 ### Why does this work at all?
 Why is it that we can distinguish between Green and Libertarian party followers?  
-Well, I used Latent Dirichlet Allocation to explore topics of third party followers. Turns out, they talk about different things (though there is a lot of overlap).
+
+I used Latent Dirichlet Allocation to explore topics of third party followers. Turns out, they talk about different things (though there is a lot of overlap):
 
 [Explore Topics](http://partypoll.co/topics)
