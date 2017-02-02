@@ -143,7 +143,7 @@ sns.distplot(np.random.exponential(30, size=10000), kde=False);
 with model:
     """
     Transforming standard deviations to precisions (1/variance) before
-    speccifying likelihoods.
+    specifying likelihoods.
     """
     λ1 = group1_std**-2
     λ2 = group2_std**-2
