@@ -199,7 +199,7 @@ pm.plot_posterior(trace[1000:],
 ```
 
 
-![png](/images/output_26_0.png)
+![png](/images/ABoutput_26_0.png)
 
 
 For comparison we can do a t-test, which in this case is consistent with our Bayesian analysis.
