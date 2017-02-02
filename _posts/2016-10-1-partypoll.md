@@ -17,6 +17,7 @@ Can we predict which way a person leans, politically, from what they say on soci
 ### Approach:
 
 Data Source:  
+
 I collected tweets using the TwitterAPI, from the followers of two "third party" political parties in the U.S., the Green Party, and the Libertarian Party, and used these as proxies for Green and Libertarian sympathizers. 
 
 1. I collected the last 200 tweets for each follower (this was the maximum allowable I could collect using the API).  
