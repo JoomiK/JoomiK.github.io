@@ -48,12 +48,12 @@ print('numpy version:', np.__version__)
 print('pandas version:', pd.__version__)
 print('scikit-learn version:', sk.__version__)
 ```
-
+```
     Python version: 3.5.2
     numpy version: 1.12.0
     pandas version: 0.19.2
     scikit-learn version: 0.18.1
-
+```
 
 
 
