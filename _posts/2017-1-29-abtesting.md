@@ -12,7 +12,7 @@ Code:
 ---
 
 
-## Summary  
+### Summary  
 
 I participated in a study that looked at whether the order of presenting materials in a high school biology class made a difference in test scores.
 
