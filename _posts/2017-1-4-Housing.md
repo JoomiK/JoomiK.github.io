@@ -442,46 +442,6 @@ helper = EstimatorSelectionHelper(models, params)
 helper.fit(X_train, y_train, n_jobs=-1)
 ```
 
-    Running GridSearchCV for LinearRegression.
-    Fitting 3 folds for each of 1 candidates, totalling 3 fits
-    Running GridSearchCV for Ridge.
-    Fitting 3 folds for each of 3 candidates, totalling 9 fits
-
-
-    [Parallel(n_jobs=-1)]: Done   3 out of   3 | elapsed:    0.1s finished
-
-
-    Running GridSearchCV for RF.
-    Fitting 3 folds for each of 18 candidates, totalling 54 fits
-
-
-    [Parallel(n_jobs=-1)]: Done   9 out of   9 | elapsed:    0.1s finished
-    [Parallel(n_jobs=-1)]: Done  34 tasks      | elapsed:    7.8s
-
-
-    Running GridSearchCV for EN.
-    Fitting 3 folds for each of 2 candidates, totalling 6 fits
-
-
-    [Parallel(n_jobs=-1)]: Done  54 out of  54 | elapsed:   10.5s finished
-
-
-    Running GridSearchCV for Lasso.
-    Fitting 3 folds for each of 3 candidates, totalling 9 fits
-
-
-    [Parallel(n_jobs=-1)]: Done   6 out of   6 | elapsed:    0.0s finished
-
-
-    Running GridSearchCV for GBR.
-    Fitting 3 folds for each of 54 candidates, totalling 162 fits
-
-
-    [Parallel(n_jobs=-1)]: Done   9 out of   9 | elapsed:    0.0s finished
-    [Parallel(n_jobs=-1)]: Done  34 tasks      | elapsed:    5.7s
-    [Parallel(n_jobs=-1)]: Done 162 out of 162 | elapsed:   27.1s finished
-
-
 
 ```python
 helper.score_summary()
