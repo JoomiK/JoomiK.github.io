@@ -540,9 +540,7 @@ print(gs.best_params_)
     0.773400673401
     {'random_forest__max_features': 'log2', 'pca__n_components': 100}
 
-
-### Classification report:
-The model has an f1-score of about 0.8 for labels 0 and 2 (non-functional and functional), but does poorly on label 1.
+Here are the best parameters.
 
 
 ```python
@@ -561,7 +559,8 @@ print(classification_report(y_test, y_pred))
     
     avg / total       0.78      0.78      0.78     17820
     
-
+### Classification report:
+The model has an f1-score of about 0.8 for labels 0 and 2 (non-functional and functional), but does poorly on label 1.
 
 ### Steps:
 1. Median imputation  
@@ -617,10 +616,6 @@ importances = rf.steps[2][1].feature_importances_
 std = np.std([tree.feature_importances_ for tree in rf.steps[2][1].estimators_],
              axis=0)
 indices = np.argsort(importances)[::-1]
-```
-
-
-```python
 feature_names = np.array(list(train.columns.values))
 feature_names
 ```
