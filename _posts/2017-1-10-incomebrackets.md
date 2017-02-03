@@ -4,7 +4,7 @@ title: Predicting income brackets
 ---
 
 Data: Income data from the [UCI ML Repository](http://archive.ics.uci.edu/ml/machine-learning-databases/census-income-mld/)  
-Techniques: Random forest, classification
+Techniques: Classification, random forest
 
 ---
 
