@@ -6,9 +6,6 @@ title: AB testing teaching methods with PYMC3
 Data: Student test scores  
 Techniques: Bayesian estimation, MCMC
 
-Code:  
-[AB Testing Teaching Methods](https://github.com/JoomiK/AB-testing-teaching-methods/blob/master/AB_Testing_teaching_methods.ipynb)  
-
 ---
 
 This is from a study that looked at whether the order of presenting materials in a high school biology class made a difference in test scores.
