@@ -53,10 +53,11 @@ scores.head()
 ![png](/images/test_scores.png)
 
 
-Both groups had 93 students, and the mean for group2 (81.8) is 2.8 points higher than the mean for group1 (79). We can also see that group2's min and standard deviation were lower than group1's min and standard deviation.
-
 ### How significant is the difference?
 
+Both groups had 93 students, and the mean for group2 (81.8) is 2.8 points higher than the mean for group1 (79). We can also see that group2's min and standard deviation were lower than group1's min and standard deviation. How significant are these differences? 
+
+I'll use Bayesian estimation and MCMC to estimate the difference.
 
 ```python
 scores.describe()
