@@ -11,11 +11,9 @@ Techniques: NLP, logistic regression, latent Dirichlet allocation, scraping
 ---
 
 ### Rationale:
-Can we predict which way a person leans, politically, from what they say on social media? Even if they are not talking about politics?
+Can we predict which way a person leans politically, from what they say on social media? Even if they are not talking about politics?
 
-Yes we can! The web application can be found here: [PartyPoll](http://partypoll.co/)  
-
-Try it out!
+Yes we can! Try out the web app for this project here: [PartyPoll](http://partypoll.co/)  
 
 
 ### Approach:
