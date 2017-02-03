@@ -33,6 +33,23 @@ sns.set(color_codes=True)
 np.random.seed(20090425)
 ```
 
+```python
+def prep_data(df, col1, col2):
+    """
+    Prepare data for pymc3 and return mean mu and sigma
+    """
+    y1 = np.array(df[col1])
+    y2 = np.array(df[col2])
+
+    y = pd.DataFrame(dict(value=np.r_[y1, y2], 
+                        group=np.r_[[col1]*len(y1), 
+                        [col2]*len(y2)]))
+
+    mu = y.value.mean()
+    sigma = y.value.std() * 2
+
+    return y, mu, sigma
+```
 
 
 ### The data:
@@ -68,11 +85,7 @@ scores.describe()
 
 
 ```python
-y1 = np.array(scores['group1'])
-y2 = np.array(scores['group2'])
-
-y = pd.DataFrame(dict(value=np.r_[y1, y2], group=np.r_[['group1']*len(y1), ['group2']*len(y2)]))
-
+y, mu, sigma = prep_data(scores, 'group1', 'group2')
 y.hist('value', by='group');
 ```
 
