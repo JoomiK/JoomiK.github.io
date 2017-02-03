@@ -518,19 +518,6 @@ gs.fit(X_train, y_train)
 
 
 
-    GridSearchCV(cv=None, error_score='raise',
-           estimator=Pipeline(steps=[('imputer', Imputer(axis=0, copy=True, missing_values='NaN', strategy='median', verbose=0)), ('pca', PCA(copy=True, iterated_power='auto', n_components=None, random_state=None,
-      svd_solver='auto', tol=0.0, whiten=False)), ('random_forest', RandomForestClassifier(bootstrap=True, class_weight=..._jobs=-1,
-                oob_score=False, random_state=None, verbose=0,
-                warm_start=False))]),
-           fit_params={}, iid=True, n_jobs=1,
-           param_grid={'random_forest__max_features': ['auto', 'log2'], 'pca__n_components': [40, 100, 300]},
-           pre_dispatch='2*n_jobs', refit=True, return_train_score=True,
-           scoring=None, verbose=0)
-
-
-
-
 ```python
 print(gs.best_score_)
 print(gs.best_params_)
