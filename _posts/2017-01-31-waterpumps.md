@@ -7,6 +7,7 @@ Techniques: Random forest, classification, PCA, imputation
 
 Part I- EDA and cleanup  
 Part II- Model selection and evaluation
+
 ---
 
 ### Part I- EDA and cleanup  
