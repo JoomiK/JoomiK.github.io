@@ -6,11 +6,12 @@ title: Explaining MCMC sampling
 Data: Synthetic data  
 Techniques: MCMC
 
-Code examples and annotations to explain the intuition behind the Metropolis sampling algorithm. 
 
 ---
 
 ## Metropolis Sampling
+
+Code examples and annotations to explain the intuition behind the Metropolis sampling algorithm. 
 
 
 ```python
