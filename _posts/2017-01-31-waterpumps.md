@@ -3,7 +3,7 @@ layout: post
 title: Predicting non-functional water pumps in Tanzania
 ---
 Data: Competition for [drivendata.org](https://www.drivendata.org/competitions/7/)  
-Techniques: Random forest, classification, PCA, imputation
+Techniques: Classification, random forest, PCA
 
 Part I- EDA and cleanup  
 Part II- Model selection and evaluation
