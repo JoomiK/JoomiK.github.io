@@ -6,7 +6,6 @@ title: Analyzing traffic accidents
 Data: Accident data in NYC  
 Techniques: Exploratory analysis
 
-[Analyzing Accidents in NYC](https://github.com/JoomiK/Accidents/blob/master/Accidents.ipynb)
 
 ---
 
