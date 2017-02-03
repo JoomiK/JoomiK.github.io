@@ -6,13 +6,16 @@ title: Predicting political leanings from text
 Data: Twitter API  
 Techniques: NLP, logistic regression, latent Dirichlet allocation, scraping
 
-The web application can be found here: [PartyPoll](http://partypoll.co/)  
-Try it out!
+
 
 ---
 
 ### Rationale:
 Can we predict which way a person leans, politically, from what they say on social media? Even if they are not talking about politics?
+
+Yes we can! The web application can be found here: [PartyPoll](http://partypoll.co/)  
+Try it out!
+
 
 ### Approach:
 
