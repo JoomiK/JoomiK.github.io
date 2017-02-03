@@ -6,8 +6,7 @@ title: Predicting housing prices
 Data: Boston housing dataset  
 Techniques: Gradient boosted regression trees
 
-Code:  
-[Predicting housing prices](https://github.com/JoomiK/HousingPrices/blob/master/BostonHousing.ipynb)
+
 
 ---
 
