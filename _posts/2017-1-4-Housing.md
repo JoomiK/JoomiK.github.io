@@ -11,7 +11,7 @@ Techniques: Gradient boosted regression trees
 ---
 
 
-For this project, I use publicly available data on houses to build a regression model to predict housing prices, and use outlier detection to pick out unusual cases.
+For this project, I use publicly available [data](https://archive.ics.uci.edu/ml/datasets/Housing) on houses to build a regression model to predict housing prices, and use outlier detection to pick out unusual cases.
 
 
 ```python
