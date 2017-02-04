@@ -10,7 +10,7 @@ Techniques: Exploratory analysis
 ---
 
 
-Analyzing publicly available data on traffic accidents in NYC from 2009-2016 (work in progress).
+Analyzing publicly available [data](http://www.nyc.gov/html/dot/html/about/vz_datafeeds.shtml#crash) on traffic accidents in NYC from 2009-2016 (work in progress).
 
 
 ```python
