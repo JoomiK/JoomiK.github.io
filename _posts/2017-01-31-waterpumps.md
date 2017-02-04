@@ -793,7 +793,7 @@ rf_v1
 
 
 
-Just like in the sklearn implementation, from looking at the confusion marix we can see that the error is highest with label 1. It does relatively well with labels 0 and 2. The hit_ratio is the ratio of the number of times a correct prediction was made, to the total number of predictions.
+Just like in the sklearn implementation, from looking at the confusion marix we can see that the error is highest with label 1. It does relatively well with labels 0 and 2. 
 
 The top features are also different from what we saw with the sklearn implementation, which upweighted the importance of continuous variables. In the H2O implementation the top features are all categorical.
 
