@@ -28,15 +28,16 @@ import numpy as np
 import pymc3 as pm
 import pandas as pd
 import seaborn as sns
+sns.set(color_codes=True)
 from scipy.stats import ttest_ind
 import sys
 sys.path.append('../ThinkStats2/code')
 from thinkstats2 import HypothesisTest
-sns.set(color_codes=True)
 ```
+Note: The code from Thinkstats2 can be forked [here](https://github.com/AllenDowney/ThinkStats2).
 
-Functions for data prep.
 
+Functions for data prep:
 
 ```python
 def get_col_vals(df, col1, col2):
@@ -63,7 +64,7 @@ def prep_data(df, col1, col2):
     return y, mu, sigma
 ```
 
-Functions for hypothesis testing by bootstrapping resampling.
+Functions for hypothesis testing by bootstrapping resampling:
 
 
 ```python
