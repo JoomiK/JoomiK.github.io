@@ -8,32 +8,45 @@ Techniques: Bayesian analysis, hypothesis testing, MCMC
 
 ---
 
-This is from a study that looked at whether the order of presenting materials in a high school biology class made a difference in test scores.
+I participated in a study that looked at whether the order of presenting materials in a high school biology class made a difference in test scores. 
 
-High school students were split into two groups; in Group 1, Mendelian genetics was taught before any in-depth discussion of the molecular biology underpinning genetics. In Group 2, the molecular biology was taught before teaching Mendelian genetics. Some teachers have hypothesized that the second method would be better for students; we looked at the evidence with this study.
+Students were split into two groups; in Group 1, Mendelian genetics was taught before any in-depth discussion of the molecular biology underpinning genetics. In Group 2, the molecular biology was taught before teaching Mendelian genetics. Some teachers have hypothesized that the second method would be better for students; we looked at the evidence with this study.
+
 
 Note: Every attempt was made to control for all other variables in the two groups; most importantly, they had the same teacher, textbook, and access to materials. Students were randomly placed into a group. However, there were a few things that could not be controlled for- notably, the two groups met on different times of the week.
 
 ### Approach:
+Here I look at exam score data for the two groups- this exam specifically focused on the conceptual understanding of genetics. 
 
-Here I look at exam score data for the two groups- this exam specifically focused on the conceptual understanding of genetics.
-
-I use Bayesian methods to estimate how different the scores were between the two groups, and estimate the uncertainty associated with that difference.
+I use both classical hypothesis testing and Bayesian methods to estimate the difference in the scores between the two groups, and estimate the uncertainty.
 
 
 ```python
 %matplotlib inline
+np.random.seed(20090425)
 import numpy as np
 import pymc3 as pm
 import pandas as pd
 import seaborn as sns
 from scipy.stats import ttest_ind
+import sys
+sys.path.append('../ThinkStats2/code')
+from thinkstats2 import HypothesisTest
 sns.set(color_codes=True)
-
-np.random.seed(20090425)
 ```
 
+Functions for data prep.
+
+
 ```python
+def get_col_vals(df, col1, col2):
+    """
+    Get column values 
+    """
+    y1 = np.array(df[col1])
+    y2 = np.array(df[col2])
+    return y1, y2
+
 def prep_data(df, col1, col2):
     """
     Prepare data for pymc3 and return mean mu and sigma
@@ -42,17 +55,80 @@ def prep_data(df, col1, col2):
     y2 = np.array(df[col2])
 
     y = pd.DataFrame(dict(value=np.r_[y1, y2], 
-                        group=np.r_[[col1]*len(y1), 
-                        [col2]*len(y2)]))
-
+                          group=np.r_[[col1]*len(y1), 
+                            [col2]*len(y2)]))
     mu = y.value.mean()
     sigma = y.value.std() * 2
-
+    
     return y, mu, sigma
 ```
 
+Functions for hypothesis testing by bootstrapping resampling.
 
-### The data:
+
+```python
+class DiffMeansPermute(HypothesisTest):
+    """
+    Model the null hypothesis, which says that the distributions
+    for the two groups are the same.
+    data: pair of sequences (one for each group)
+    """
+    def TestStatistic(self, data):
+        """
+        Calculate the test statistic, the absolute difference in means
+        """
+        group1, group2 = data
+        test_stat = abs(np.mean(group1) - np.mean(group2))
+        return test_stat
+
+    def MakeModel(self):
+        """
+        Record the sizes of the groups, n and m, 
+        and combine into one Numpy array, self.pool
+        """
+        group1, group2 = self.data
+        self.n, self.m = len(group1), len(group2)
+        
+        # make group1 and group2 into a single array
+        self.pool = np.concatenate((group1, group2))
+
+    def RunModel(self):
+        """
+        Simulate the null hypothesis- shuffle the pooled values 
+        and split into 2 groups with sizes n and m
+        """
+        np.random.shuffle(self.pool)
+        data = self.pool[:self.n], self.pool[self.n:]
+        return data
+
+def Resample(x):
+    """
+    Get a bootstrap sample
+    """
+    return np.random.choice(x, len(x), replace=True)
+
+def FalseNegRate(data, num_runs=100):
+    """
+    Calculate the false negative rate: the chance that the hypothesis 
+    test will fail when the effect is real.
+    """
+    group1, group2 = data
+    count = 0
+
+    for i in range(num_runs):
+        sample1 = Resample(group1)
+        sample2 = Resample(group2)
+
+        ht = DiffMeansPermute((sample1, sample2))
+        pvalue = ht.PValue(iters=101)
+        
+        if pvalue > 0.05:
+            count += 1
+
+    return count / num_runs
+```
+
+### The data
 
 
 ```python
@@ -70,18 +146,61 @@ scores.head()
 ![png](/images/test_scores.png)
 
 
-### How significant is the difference?
 
-Both groups had 93 students, and the mean for group2 (81.8) is 2.8 points higher than the mean for group1 (79). We can also see that group2's min and standard deviation were lower than group1's min and standard deviation. How significant are these differences? 
-
-I'll use Bayesian estimation and MCMC to estimate the difference.
 
 ```python
 scores.describe()
 ```
 
-
 ![png](/images/score_describe.png)
+
+
+
+
+#### How significant is the difference?
+
+Both groups had 93 students, and the mean for group2 (81.8) is 2.8 points higher than the mean for group1 (79). We can also see that group2's min and standard deviation were lower than group1's min and standard deviation. How significant are these differences?
+
+### Classical hypothesis testing
+#### Simulation based:
+
+First we can start with "classical" hypothesis testing and calculate p-values.  
+We can do this by: (1) constructing a model of the null hypothesis via simulation or (2) using statsmodel's t-test.
+
+
+```python
+y1, y2 = get_col_vals(scores, 'group1', 'group2')
+ht = DiffMeansPermute((y1, y2))
+
+pval=ht.PValue()
+pval
+```
+
+
+
+
+    0.043
+
+
+
+#### T-test:
+
+
+```python
+ttest_ind(y1,y2, equal_var=False)
+```
+
+
+
+
+    Ttest_indResult(statistic=-2.0683211848534517, pvalue=0.040018677966763901)
+
+
+
+Both give p-values of about .04, so at a cutoff of .05, these tests say the difference is significant. However, this might be a bit borderline. 
+
+### Bayesian
+I'll also Bayesian methods to estimate how different the scores were between the two groups, and estimate the uncertainty.
 
 
 ```python
@@ -99,7 +218,7 @@ So the description of the data uses five parameters: the means of the two groups
 
 I'll apply broad normal priors for the means. The hyperparameters are arbitrarily set to the pooled empirical mean of the data and 2 times the pooled empirical standard deviation; this just applies very "diffuse" information to these quantities.
 
-### Sampling from the posterior:
+### Sampling from the posterior
 
 
 ```python
@@ -114,7 +233,7 @@ with pm.Model() as model:
     group2_mean = pm.Normal('group2_mean', μ_m, sd=μ_s)
 ```
 
-I'll give a uniform(1,20) prior for the standard deviations.
+I'll give a uniform(1,20) prior for the standard deviations. 
 
 
 ```python
@@ -178,8 +297,6 @@ with model:
     diff_of_stds = pm.Deterministic('difference of stds',  group2_std - group1_std)
     effect_size = pm.Deterministic('effect size',
                                    diff_of_means / np.sqrt((group2_std**2 + group1_std**2) / 2))
-
-
 ```
 
 
@@ -188,9 +305,17 @@ with model:
     trace = pm.sample(2000, njobs=2)
 ```
 
-### Summarize the posterior distributions of the parameters:
+    Assigned NUTS to group1_mean
+    Assigned NUTS to group2_mean
+    Assigned NUTS to group1_std_interval_
+    Assigned NUTS to group2_std_interval_
+    Assigned NUTS to ν_min_one_log_
+     [-----------------100%-----------------] 2000 of 2000 complete in 10.7 sec
+
+### Summarize the posterior distributions of the parameters.
 
 Let's look at the group differences (group2_mean = group1_mean), setting ref_val=0, which displays the percentage below and above zero.
+
 
 ```python
 pm.plot_posterior(trace[1000:],
@@ -206,7 +331,7 @@ For the difference in means, 1.9% of the posterior probability is less than zero
 
 In other words, there is a very small chance that the mean for group1 is larger or equal to the mean for group2, but there a much larger chance that group2's mean is larger than group1's.
 
-It also looks like the variability in scores for group2 was somewhat lower than for group1- perhaps switching the order that genetics was taught not only increased scores, but brought some of the outlier students (particularly the ones that would have scored most poorly) closer to the mean?
+It also looks like the variability in scores for group2 was somewhat lower than for group1- perhaps switching the order that genetics was taught not only increased scores, but brought some of the outlier students (particularly the ones that would have scored most poorly) closer to the mean? 
 
 
 ```python
@@ -217,18 +342,5 @@ pm.plot_posterior(trace[1000:],
 ```
 
 
-![png](/images/ABoutput_26_0.png)
-
-
-For comparison we can do a t-test, which in this case is consistent with our Bayesian analysis that group2's mean is larger than group1.
-
-
-```python
-ttest_ind(y1,y2, equal_var=False)
-```
-
-
-
-
-    Ttest_indResult(statistic=-2.0683211848534517, pvalue=0.040018677966763901)
+![png](/images/output_26_0.png)
 
