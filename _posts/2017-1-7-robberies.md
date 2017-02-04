@@ -8,7 +8,7 @@ Techniques: ARIMA models, stationarity tests, differencing
 
 ---
 
-This project looks at monthly Boston armed robberies from Jan 1966-Oct 1975.
+This project looks at monthly Boston armed robberies from Jan 1966-Oct 1975.  
 [Data](https://datamarket.com/data/set/22ob/monthly-boston-armed-robberies-jan1966-oct1975-deutsch-and-alt-1977#!ds=22ob&display=line) originally from : McCleary & Hay (1980)
 
 
