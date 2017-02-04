@@ -224,7 +224,3 @@ The number of iteration is at the top center of each row.
 
 Thanks to [this post](http://twiecki.github.io/blog/2015/11/10/mcmc-sampling/) for more code and explanations.
 
-
-```python
-
-```
