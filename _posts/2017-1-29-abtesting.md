@@ -343,5 +343,5 @@ pm.plot_posterior(trace[1000:],
 ```
 
 
-![png](/images/output_26_0.png)
+![png](/images/output_36_0.png)
 
