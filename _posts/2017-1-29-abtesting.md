@@ -162,7 +162,7 @@ scores.describe()
 
 Both groups had 93 students, and the mean for group2 (81.8) is 2.8 points higher than the mean for group1 (79). We can also see that group2's min and standard deviation were lower than group1's min and standard deviation. How significant are these differences?
 
-### Classical hypothesis testing
+### Classical hypothesis testing  
 #### Simulation based:
 
 First we can start with "classical" hypothesis testing and calculate p-values.  
