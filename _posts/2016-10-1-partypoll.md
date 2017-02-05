@@ -26,7 +26,7 @@ Yes we can! Try out the web app for this project here: [PartyPoll](http://partyp
 
 4. I used these to train a logistic regression classifier that would predict political leaning based on text data. It achieved about 84% accuracy in predicting political party.
 
-![png](/images/partpoll.png)
+![png](/images/partypoll.png)
 
 
 ### Why does this work at all?
