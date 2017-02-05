@@ -289,7 +289,6 @@ with model:
 
 ### Summarize the posterior distributions of the parameters.
 
-Let's look at the group differences (group2_mean = group1_mean), setting ref_val=0, which displays the percentage below and above zero.
 
 
 ```python
@@ -301,12 +300,7 @@ pm.plot_posterior(trace[1000:],
 
 ![png](/images/output_24_0.png)
 
-
-For the difference in means, 1.9% of the posterior probability is less than zero, while 98.1% is greater than zero. 
-
-In other words, there is a very small chance that the mean for group1 is larger or equal to the mean for group2, but there a much larger chance that group2's mean is larger than group1's.
-
-It also looks like the variability in scores for group2 was somewhat lower than for group1- perhaps switching the order that genetics was taught not only increased scores, but brought some of the outlier students (particularly the ones that would have scored most poorly) closer to the mean? 
+Let's look at the group differences (group2_mean = group1_mean), setting ref_val=0, which displays the percentage below and above zero.
 
 
 ```python
@@ -319,3 +313,8 @@ pm.plot_posterior(trace[1000:],
 
 ![png](/images/output_36_0.png)
 
+For the difference in means, 1.9% of the posterior probability is less than zero, while 98.1% is greater than zero. 
+
+In other words, there is a very small chance that the mean for group1 is larger or equal to the mean for group2, but there a much larger chance that group2's mean is larger than group1's.
+
+It also looks like the variability in scores for group2 was somewhat lower than for group1- perhaps switching the order that genetics was taught not only increased scores, but brought some of the outlier students (particularly the ones that would have scored most poorly) closer to the mean? 
