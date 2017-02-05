@@ -108,25 +108,6 @@ def Resample(x):
     """
     return np.random.choice(x, len(x), replace=True)
 
-def FalseNegRate(data, num_runs=100):
-    """
-    Calculate the false negative rate: the chance that the hypothesis 
-    test will fail when the effect is real.
-    """
-    group1, group2 = data
-    count = 0
-
-    for i in range(num_runs):
-        sample1 = Resample(group1)
-        sample2 = Resample(group2)
-
-        ht = DiffMeansPermute((sample1, sample2))
-        pvalue = ht.PValue(iters=101)
-        
-        if pvalue > 0.05:
-            count += 1
-
-    return count / num_runs
 ```
 
 ### The data
