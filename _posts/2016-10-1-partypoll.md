@@ -26,6 +26,8 @@ Yes we can! Try out the web app for this project here: [PartyPoll](http://partyp
 
 4. I used these to train a logistic regression classifier that would predict political leaning based on text data. It achieved about 84% accuracy in predicting political party.
 
+![png](/images/partpoll.png)
+
 
 ### Why does this work at all?
 How is it that we can distinguish between Green and Libertarian party followers?  
