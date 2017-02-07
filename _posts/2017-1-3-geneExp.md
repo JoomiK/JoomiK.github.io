@@ -22,7 +22,7 @@ Install `gplots`, `RColorBrewer` and Bioconductor packages `DESeq` and `pasilla`
 
 ### The Workflow:
 
-First get the path to the file containing the raw count data. The file countains counts for each gene(row) in each sample (column). Here we're loading the file using read.table and storing as count.table. Header = TRUE if the first row of your file contains the names of variables.
+First get the path to the file containing the raw count data. The file countains counts for each gene(row) in each sample (column). 
 
 
 ```r
@@ -129,7 +129,7 @@ With DESeq, differential gene expression is approximated by a negative binomial 
 cds = estimateDispersions( cds )
 ```
 
-Plotting dispersion estimates. The level of dispersion is related to the biological dispersion in each treatment.The more variation, the bigger the difference between counts between treatments is required before the differences become significant.
+The level of dispersion is related to the biological dispersion in each treatment.The more variation, the bigger the difference between counts between treatments is required before the differences become significant. Plot dispersion estimates:
 
 ```r
 plotDispEsts( cds )
@@ -164,7 +164,7 @@ head(res)
 ## 5    -0.26383857 0.2414208 0.8811746
 ## 6    -0.04638999 0.7572819 1.0000000
 ```
-padj is the adjusted p-value (controlled for DFR).
+padj is the adjusted p-value (controlled for FDR).
 To order by pad-j (decreasing):
 
 ```r
