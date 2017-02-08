@@ -8,7 +8,8 @@ Techniques: ARIMA models, stationarity tests, differencing
 
 ---
 
-This project looks at monthly Boston armed robberies from Jan 1966-Oct 1975.  
+This project looks at monthly Boston armed robberies from Jan 1966-Oct 1975. Here I build a quick ARIMA model to forecast robberies.  
+
 [Data](https://datamarket.com/data/set/22ob/monthly-boston-armed-robberies-jan1966-oct1975-deutsch-and-alt-1977#!ds=22ob&display=line) originally from : McCleary & Hay (1980)
 
 
@@ -387,11 +388,12 @@ plt.tight_layout()
 
 The two dotted lines on either sides of 0 are confidence intervals. These can be used to determine 'p' and 'q' values as (p: the lag value where the PACF chart crosses the upper confidence interval for the first time, q: the lag value where the ACF chart crosses the upper confidence interval for the first time).
 
-In this case it looks like p=1 and q=1.
+It looks like p is roughly 1 and q is roughly equal to 1. For now I will use these values to build a model and come back to refining later.
+
 
 ### ARIMA
 
-I'l model 3 different ARIMA models considering individual as well as combined effects.
+For now I'll justtry 3 different ARIMA models considering individual as well as combined effects.
 
 
 ```python
@@ -533,5 +535,8 @@ plt.title('RMSE: %.4f'% np.sqrt(sum((predictions_ARIMA-ts)**2)/len(ts)))
 ![png](/images/output_51_1.png)
 
 
-And that's the forecast at the original scale. It's not a great forecast. To be continued...
+And that's the forecast at the original scale. It's not great; this was just a quick and dirty forecast, but after this, I'll come back and refine the model by:   
 
+1. Using seasonal ARIMA, for which I would need to find (p,d,q,P,D,Q) values.  
+2. Get a holdout sample (validatiaon set) using recent past data points.    
+2. Run through different parameter values and get the values that give the lowest error on the validation set.  
