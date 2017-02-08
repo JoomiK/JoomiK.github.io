@@ -15,4 +15,4 @@ My undergraduate background was in environmental studies and philosophy, with mi
 
 ### Contact me
 Email: [joomikim1@gmail.com](mailto:joomikim1@gmail.com)  
-[Resume](https://www.docdroid.net/LJbaEd4/joomi-kim-resume.pdf.html)  
+[Resume](https://www.docdroid.net/XjTo26w/joomi-kim-resume.pdf.html)  
