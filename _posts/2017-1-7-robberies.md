@@ -167,8 +167,8 @@ check_stationarity(ts)
 
 The mean (in red) is clearly increasing with time and the test statistic is much larger than the critical values, so we can't reject the null hypothesis- aka this is not a stationary series.
 
-### Make the series stationary
-#### Eliminating trend
+### Make the series stationary  
+#### Eliminating trend  
 
 In this case there is a significant positive trend. Let's first work on estimating and eliminating it. We can do a simple log transform (which would penalize higher values more than smaller ones).
 
