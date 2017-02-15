@@ -64,7 +64,7 @@ def prep_data(df, col1, col2):
     return y, mu, sigma
 ```
 
-Functions for hypothesis testing by bootstrapping resampling:
+Functions for hypothesis testing by bootstrap resampling:
 
 
 ```python
