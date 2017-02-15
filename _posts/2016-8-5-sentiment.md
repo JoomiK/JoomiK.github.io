@@ -11,11 +11,12 @@ Techniques: NLP, sentiment analysis with various models, scraping
 ### Part 1- EDA and cleanup of tweets about Trump and Clinton
 
 During the 2016 Presidential campaign, I collected a little over 270,000 tweets using the Twitter API and filtered for tweets that contained 'Trump', 'DonaldTrump', 'Hillary', 'Clinton', or 'HillaryClinton'.  The tweets were collected in July of 2016.
+
 Twitter parameters: https://dev.twitter.com/streaming/overview/request-parameters#track
 
 I'll preprocess these tweets to do some exploratory analysis, look at the most common co-occurring words, and perform sentiment analysis.  
 
-Note: I did not have labeled data, so I used short movie reviews to train my model. This is not expected to lead to accurate predictions of sentiment in tweets (especially of political nature), since this woold not capture things like sarcasm (of which there is not shortage on Twitter). However, I did it anyway, to try it out, and have a workflow ready for when I do have the opportunity to work with labeled data.
+Note: I did not have labeled data, so I used short movie reviews to train my model. This is not expected to lead to accurate predictions of sentiment in tweets (especially of ones that are political in nature), since this would not capture things like sarcasm (of which there is not shortage on Twitter). However, I did it anyway to try it out, and have a workflow ready for when I do have labeled data.
 
 
 ```python
