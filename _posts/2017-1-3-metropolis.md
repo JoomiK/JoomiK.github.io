@@ -80,7 +80,7 @@ Let's see how we would do this if we couldn't solve this by hand, and demonstrat
 
 2. Then you propose to move from that position to somewhere else. The Metropolis sampler just takes a sample from a "proposal distribution"- a normal distribution centered at your current mu value with a standard deviation (proposal_width) that determines how far you propose jumps (here we use scipy.stats.norm).
 
-3. Next you evaluate whether to accept or reject the proposal- in other words, decide wheter that's a good place to jump or not. If the resulting normal distribution with that proposed_mu explains the data better than the old mu, you definitely go there. "Explains the data better" here means we compute the probability of the data, given the likelihood (normal) with the proposed parameter values (proposed mu and fixed sigma = 1).
+3. Next you evaluate whether to accept or reject the proposal- in other words, decide whether that's a good place to jump or not. If the resulting normal distribution with that proposed_mu explains the data better than the old mu, you definitely go there. "Explains the data better" here means we compute the probability of the data, given the likelihood (normal) with the proposed parameter values (proposed mu and fixed sigma = 1).
 
 4. We would just have a hill-climbing algorithm if this were all there was to the algorithm, so sometimes we have to accept moves in directions where the mu_proposal does not have higher likelihood than mu_current. The acceptance probability, p_accept, which is a ratio of p_proposal/p_current allows us to do just that. If p_proposal is larger than p_current, that ratio will be greater than 1 and we will accept. If p_current is larger, we will move with probability equal to p_accept.
 
