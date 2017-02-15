@@ -447,7 +447,7 @@ It's easy to imagine that we could improve our predictions with other sources of
 - Presence of other utilities nearby  
 - Rate of previous breakdowns  
 - Distance to major road  
-- Whether the water pump is in a hazardous or flooding area
+- Whether the water pump is in a hazardous or flooding area  
 - Crime rate in the near vicinity  
 
 ---
