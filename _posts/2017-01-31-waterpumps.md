@@ -472,7 +472,7 @@ Note: region_code and district_code are integers, but categorical. I could conve
 
 
 ```python
-# Getting just the training data by dropping the labels
+# Getting just the features by dropping the labels
 train = data.drop('status_group',1)
 
 # Getting labels
@@ -483,8 +483,9 @@ labels = data.status_group
 
 
 ```python
-X = train.as_matrix()
-y = labels.tolist()
+
+X = train.as_matrix() 
+y = labels.tolist() 
 
 X_train, X_test, y_train, y_test = \
     train_test_split(X, y, test_size=0.3, random_state=0)
