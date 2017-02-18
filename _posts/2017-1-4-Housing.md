@@ -60,7 +60,7 @@ class EstimatorSelectionHelper:
     
     """
     A helper class for running parameter grid search across different models. 
-    It taks two dictionaries. The first contains the models to be scored. 
+    It takes two dictionaries. The first contains the models to be scored. 
     The second contains the parameters for each model
     """
     
@@ -73,12 +73,13 @@ class EstimatorSelectionHelper:
         self.keys = models.keys()
         self.grid_searches = {}
     
-    """
-    fit(X,y) method runs a parameter grid search with cross validation for each model
-    and for the given training data. If scoring=None, the score method of the estimator is used.
-    """
+    
     
     def fit(self, X, y, cv=3, n_jobs=1, verbose=1, scoring=None, refit=False): 
+        """
+        fit(X,y) method runs a parameter grid search with cross validation for each model
+        and for the given training data. If scoring=None, the score method of the estimator is used.
+        """
         for key in self.keys:
             print("Running GridSearchCV for %s." % key)
             model = self.models[key]
@@ -88,11 +89,12 @@ class EstimatorSelectionHelper:
             gs.fit(X,y)
             self.grid_searches[key] = gs 
             
-    """
-    After calling fit(X,y), the score_summary() method returns a df with a summary of the scores
-    """
+    
     
     def score_summary(self, sort_by='mean_score'):
+        """
+        After calling fit(X,y), the score_summary() method returns a df with a summary of the scores
+        """
         def row(key, scores, params):
             d = {
                  'estimator': key,
