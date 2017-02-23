@@ -16,7 +16,7 @@ Twitter parameters: https://dev.twitter.com/streaming/overview/request-parameter
 
 I'll preprocess these tweets to do some exploratory analysis, look at the most common co-occurring words, and perform sentiment analysis.  
 
-Note: I did not have labeled data, so I used short movie reviews to train my model. This is not expected to lead to accurate predictions of sentiment in tweets (especially of ones that are political in nature), since this would not capture things like sarcasm (of which there is not shortage on Twitter). However, I did it anyway to try it out, and have a workflow ready for when I do have labeled data.
+Note: I did not have labeled data, so I used short movie reviews to train my model. This is not expected to lead to accurate predictions of sentiment in tweets (especially of ones that are political in nature), since this would not capture things like sarcasm (of which there is no shortage on Twitter). However, I did it anyway to try it out, and have a workflow ready for when I do have labeled data.
 
 
 ```python
@@ -749,7 +749,7 @@ ax.legend(loc='best')
 Red is negative and green is positive.
 
 
-The tweets were overwhelmingly classified as negative for both candidates. Of course these classifiers are not great for tweets, because they were trained on short movie reviews. In particular I'm guessing that movie reviews don't use as many acronyms as tweets. And I can also imagine that they're generally less sarcastic than tweets.
+The tweets were mostly classified as negative for both candidates. Of course these classifiers are not great for tweets, because they were trained on short movie reviews. In particular I'm guessing that movie reviews don't use as many acronyms as tweets. And I can also imagine that they're generally less sarcastic than tweets.
 
 If I were to try to improve on the classifier I'd get some tweets labeled, and also include more classes so that in addition to "positive" and "negative" I'd have "neutral" and maybe also "sarcastic." I'd also explore whether emoticons were predictive of sentiment.
 
