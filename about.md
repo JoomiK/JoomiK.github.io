@@ -13,5 +13,4 @@ Lately I've worked on projects in [classification](https://joomik.github.io/wate
 
 My undergraduate background was in environmental studies and philosophy, with minors in physics and biology. I love design, writing, psychology, and travel, and have written articles for Natural History magazine, published in academic journals, and [contributed to educational sites](https://ivyed.net/engaging-girls-in-stem/). 
 
-I spend way too much time reading about politics. 
 
